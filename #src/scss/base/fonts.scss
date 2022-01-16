@@ -1,0 +1,29 @@
+// Для хорошего отобр. шрифтов, подгружаемых с Google Fonts добавляй это в конец ссылки
+// &display=swap&subset=cyrillic-ext
+
+@font-face {
+    font-family: "Raleway";
+    font-display: swap;
+    src: url("../../fonts/Raleway-Regular.woff") format("woff"),
+        url("../../fonts/Raleway-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-display: swap;
+    src: url("../../fonts/Raleway-Medium.woff") format("woff"),
+        url("../../fonts/Raleway-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-display: swap;
+    src: url("../../fonts/Raleway-SemiBold.woff") format("woff"),
+        url("../../fonts/Raleway-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}

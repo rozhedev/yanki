@@ -1,0 +1,30 @@
+// * DEFAULT FONT
+$font-family: "Raleway";
+$font-size: 18;
+
+// * MAX & MIN WIDTH
+$max-width: 1440;
+$min-width: 375;
+
+// * BREAKPOINTS
+$big-tablet: 1023.98;
+$little-tablet: 991.98;
+$phone: 719.98;
+
+// * CONTAINERS
+// Макс. ширина контейнера с учетом padding, чтобы контент не прилипал к краям при адаптиве
+// 1280 + 12*2 или 959.98 + 16 (если padding: 0 8px)
+
+$xl: 1280 + 24;
+$lg: 959.98 + 16;
+$md: 719.98 + 16;
+$sm: 335.98 + 16;
+
+// * COLORS
+$dark: #00143C;
+$light: #F8F8FF;
+
+// * EFFECTS
+$transition: .6s all;
+
+// * OTHER

@@ -1,0 +1,28 @@
+// * GRID
+
+//<WRAPPER>==================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+//<GRID & CONTAINER>==========================
+._container {
+	max-width: $xl + px;
+	margin: 0 auto;
+	padding: 0 12px;
+
+	@media (max-width: $big-tablet + px) {
+		max-width: $lg + px;
+		padding: 0 8px;
+	}
+	@media (max-width: $little-tablet + px) {
+		max-width: $md + px;
+	}
+	@media (max-width: $phone + px) {
+		max-width: $sm + px;
+	}
+}
