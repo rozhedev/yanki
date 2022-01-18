@@ -1,0 +1,226 @@
+.header {
+    &__inner {
+        position: relative;
+        padding-top: 24px;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu-icon,
+    &__hidden-icon {
+        z-index: 5;
+        position: relative;
+        display: block;
+        width: 34px;
+        height: 24px;
+        cursor: pointer;
+
+        & span,
+        &::before,
+        &::after {
+            left: 0;
+            position: absolute;
+            height: 4px;
+            transition: all 0.3s ease 0s;
+            background-color: $light-color;
+        }
+        &::before,
+        &::after {
+            content: "";
+        }
+        & span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+            width: 26px;
+        }
+        &::before {
+            top: 0;
+            width: 34px;
+        }
+        &::after {
+            bottom: 0;
+            width: 18px;
+        }
+    }
+    &__menu {
+        list-style-type: none;
+        margin-left: 78px;
+
+        &-list {
+            display: flex;
+        }
+        &-link {
+            color: $light-color;
+            margin-left: 26px;
+            transition: $transition;
+        }
+    }
+
+    // * HIDDEN MENU
+
+    &__hidden {
+        // * ^undefined class^
+        &-menu {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 85px;
+            left: 0;
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+            padding: 32px 16px 26px;
+            background-color: $light-color;
+            box-shadow: 0 10px 15px rgba($color: $dark-color, $alpha: 0.64);
+            transition: $transition;
+        }
+
+        &-icon {
+            span {
+                display: none;
+            }
+            &::after,
+            &::before {
+                top: 10px;
+                background-color: $primary-accent-color;
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                bottom: 10px;
+                width: 34px;
+                transform: rotate(-45deg);
+            }
+        }
+        &-list {
+            display: flex;
+            margin-left: 144px;
+        }
+        &-link {
+            margin-left: 26px;
+            transition: $transition;
+        }
+        &-menu._active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    .logo {
+        display: block;
+    }
+    &__select {
+        display: flex;
+        div:not(:first-child) {
+            padding-left: 10px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        &-item {
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+    }
+    &__mobile-menu {
+        display: none;
+    }
+    .search {
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition;
+
+        &._active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    // * ADAPTIVE
+
+    @include media1024 {
+        &__menu-link {
+            margin-left: 20px;
+        }
+        &__buttons-item {
+            &:not(:first-child) {
+                margin-left: 24px;
+            }
+        }
+    }
+
+    @include media768 {
+        &__menu-icon {
+            order: 1;
+        }
+        &__select {
+            order: 2;
+        }
+        .logo {
+            order: 3;
+            margin-left: 40px;
+        }
+        &__buttons {
+            order: 4;
+        }
+        &__menu {
+            display: none;
+        }
+        &__select {
+            display: none !important;
+        }
+        &__buttons-item {
+            &:nth-child(-n + 2) {
+                display: none;
+            }
+        }
+        &__hidden-menu,
+        &__hidden-menu._active {
+            display: none;
+        }
+        .search {
+            display: none;
+        }
+        &__mobile {
+            // * ^undefined class^
+            &-menu {
+                display: none;
+                z-index: 5;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $light-color;
+            }
+            &-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-list {
+                &:first-child {
+                    path {
+                        fill: $primary-accent-color;
+                    }
+                }
+            }
+        }
+    }
+    @include media375 {
+        .logo {
+            margin-left: 60px;
+            img {
+                height: 20px;
+            }
+        }
+        &__buttons-item {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

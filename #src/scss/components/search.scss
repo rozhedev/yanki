@@ -1,0 +1,35 @@
+.search {
+    position: absolute;
+    top: 80px;
+    right: 0;
+
+    &__body {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__inp {
+        width: 300px;
+        height: 40px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 1px solid $dark-color;
+
+        &:focus {
+            border: 1px solid $primary-accent-color;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+        path {
+            fill: $dark-color;
+        }
+    }
+}

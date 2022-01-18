@@ -31,21 +31,28 @@ html {
 html,
 body {
 	height: 100%;
-	min-width: $sm;
+	min-width: $sm + px;
 }
 body {
+    max-width: $max-width + px;
+    margin: 0 auto;
 	line-height: 1;
 	font-family: $font-family, sans-serif;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-    font-weight: 400;
+    font-weight: 300;
 
     body._lock {
         overflow: hidden;
     }
 }
+
+.page {
+    flex: 1 1 auto;
+}
+
 input,
 button,
 textarea {
@@ -75,6 +82,7 @@ ul li {
 }
 img {
 	vertical-align: top;
+    object-fit: cover;
 }
 h1,
 h2,

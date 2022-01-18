@@ -19,13 +19,17 @@
 @import "base/ui.scss";
 
 // * LIBS
-// @import "libs/swiper.scss";
+// @import 'libs/swiper.scss';
 
 // * COMPONENTS
-@import 'components/news-item.scss';
+@import 'components/header.scss';
+@import "components/select.scss";
+@import "components/search.scss";
+@import "components/footer.scss";
 
 // * HOME SECTIONS
 @import "home/main.scss";
+@import "home/categories.scss";
 
 // * PAGES
-@import "pages/about.scss";
+// @import "home/main.scss";
