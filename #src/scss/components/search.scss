@@ -14,12 +14,13 @@
         padding: 10px 20px;
         border-radius: 20px;
         border: 1px solid $dark-color;
+        transition: $normalAnimation;
 
         &:focus {
             border: 1px solid $primary-accent-color;
         }
     }
-    &__icon {
+    &__btn {
         position: absolute;
         top: 13px;
         right: 20px;

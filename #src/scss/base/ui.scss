@@ -50,26 +50,38 @@
 .text {
     font-weight: 300;
     font-size: 16px;
-    line-height: 20px;
     color: $dark-color;
+
+    @include media768 {
+        font-size: 14px;
+    }
 }
 
 .descr {
     font-weight: 200;
     font-size: 14px;
-    line-height: 16px;
     color: $dark-color;
+
+    @include media768 {
+        font-size: 12px;
+    }
 }
 
 .navlink {
     font-weight: 300;
     font-size: 18px;
-    line-height: 21px;
     color: $dark-color;
     text-transform: uppercase;
+    transition: $normalAnimation;
 
     &:hover {
         color: $primary-accent-color;
+    }
+    @include media768 {
+        font-size: 16px;
+        &:hover {
+            color: $dark-color;
+        }
     }
 }
 
@@ -77,10 +89,6 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 14px;
-
-    @include media768 {
-        height: 40px;
-    }
 }
 
 .btn {
@@ -99,6 +107,10 @@
 
     @include media768 {
         height: 40px;
+        font-size: 14px;
+        &:hover {
+            color: $dark-color;
+        }
     }
 }
 
@@ -114,9 +126,11 @@
     line-height: 19px;
     text-align: center;
     color: rgba($color: #252525, $alpha: 0.8);
+    transition: $normalAnimation;
 
     @include media768 {
         height: 40px;
+        font-size: 14px;
     }
 }
 
@@ -129,6 +143,7 @@
         -ms-appearance: none;
         appearance: none;
         position: absolute;
+        transition: $normalAnimation;
 
         &:checked + .radio__label::after {
             opacity: 1;
@@ -167,7 +182,7 @@
             height: 6px;
             border-radius: 50%;
             background-color: $primary-accent-color;
-            transition: $transition;
+            transition: $normalAnimation;
         }
     }
 }

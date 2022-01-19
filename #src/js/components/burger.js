@@ -33,11 +33,24 @@ const iconMenu = document.querySelector(".header__menu-icon");
 const iconClose = document.querySelector(".header__hidden-icon");
 const menuBody = document.querySelector(".header__hidden-menu");
 
-if (iconMenu) {
+const lgContainer = 980;
+
+if (iconMenu && document.documentElement.clientWidth > lgContainer) {
     iconMenu.addEventListener("click", function (e) {
-        menuBody.classList.toggle("_active");
+        console.log(document.documentElement.clientWidth);
+        menuBody.classList.add("_active");
     });
     iconClose.addEventListener("click", function (e) {
-        menuBody.classList.toggle("_active");
+        menuBody.classList.remove("_active");
+    });
+}
+
+const mobileMenu = document.querySelector(".header__mobile-menu")
+
+if (iconMenu && document.documentElement.clientWidth < lgContainer) {
+    iconMenu.addEventListener("click", function (e) {
+        document.body.classList.toggle("_lock");
+        iconMenu.classList.toggle("_active");
+        mobileMenu.classList.toggle("_active");
     });
 }

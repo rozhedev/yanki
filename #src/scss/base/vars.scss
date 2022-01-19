@@ -13,12 +13,12 @@ $phone: 720.02;
 
 // * CONTAINERS
 // Макс. ширина контейнера с учетом padding, чтобы контент не прилипал к краям при адаптиве
-// 1280 + 12*2 или 959.98 + 16 (если padding: 0 8px)
+// 1280 + 20*2 или 959.98 + 10*2 (если padding: 0 10px)
 
-$xl: 1140 + 60;
-$lg: 959.98 + 30;
-$md: 719.98 + 30;
-$sm: 334.98 + 30;
+$xl: 1140 + 40;
+$lg: 959.98 + 20;
+$md: 719.98 + 20;
+$sm: 334.98 + 20;
 
 // * COLORS
 $dark-color: #252525;
@@ -30,6 +30,7 @@ $catalog-color-blue: #6F83A4;
 $catalog-color-yellow: #F1DDAA;
 
 // * EFFECTS
-$transition: .6s all;
+$normalAnimation: .6s all;
+$fastAnimation: .4s all;
 
 // * OTHER

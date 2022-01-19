@@ -13,11 +13,11 @@
 ._container {
 	max-width: $xl + px;
 	margin: 0 auto;
-	padding: 0 30px;
+	padding: 0 20px;
 
 	@media (max-width: $big-tablet + px) {
 		max-width: $lg + px;
-        padding: 0 15px;
+        padding: 0 10px;
 	}
 	@media (max-width: $little-tablet + px) {
 		max-width: $md + px;

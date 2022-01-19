@@ -4,7 +4,7 @@
         url("../img/photos/bg/women-main2.jpg") center / 33.33% 100% no-repeat,
         url("../img/photos/bg/women-main3.jpg") right / 33.33% 100% no-repeat;
     &__inner {
-        margin-top: 320px;
+        margin-top: 270px;
         text-align: center;
     }
     .title {
@@ -34,7 +34,7 @@
             url("../img/photos/bg/women-main3.jpg") right / 50% 100% no-repeat;
 
         &__inner {
-            margin-top: 240px;
+            margin-top: 225px;
         }
     }
     @include media375 {

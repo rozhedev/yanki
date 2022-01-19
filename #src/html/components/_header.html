@@ -16,6 +16,9 @@
                 <a href="#" class="logo">
                     <img src="img/logo/white-logo.svg" alt="логотип">
                 </a>
+
+                <!-- * SELECT -->
+
                 <div class="header__select">
                     <div>
                         <select name="select-lang" id="select-lang" class="select-lang">
@@ -45,7 +48,7 @@
             <div class="search">
                 <div class="search-body">
                     <input type="text" name="search" id="search" class="search__inp" placeholder="Введите ваш запрос">
-                    <span class="search__icon">
+                    <button class="search__btn">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_100_26)">
                                 <path
@@ -58,46 +61,70 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                    </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- * HIDDEN MENU -->
+
+            <div class="header__hidden-menu">
+                <div class="header__hidden-icon">
+                    <span></span>
+                </div>
+                <nav class="header__hidden-body">
+                    <ul class="header__hidden-list">
+                        <li><a href="#" class="header__hidden-link navlink">ОПЛАТА И ДОСТАВКА</a></li>
+                        <li><a href="#" class="header__hidden-link navlink">УСЛОВИЯ ВОЗВРАТА</a></li>
+                        <li><a href="#" class="header__hidden-link navlink">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- * MOBILE MENU -->
+
+    <div class="header__mobile-menu">
+        <div class="header__mobile-settings">
+            <div class="search search--mobile">
+                <div class="search-body">
+                    <input type="text" name="search" id="search" class="search__inp" placeholder="Введите ваш запрос">
+                    <button class="search__btn">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_100_26)">
+                                <path
+                                    d="M19.729 17.9888L25 23.2586L23.2586 25L17.9888 19.729C16.028 21.3009 13.5892 22.1558 11.0761 22.1522C4.9621 22.1522 0 17.1901 0 11.0761C0 4.9621 4.9621 0 11.0761 0C17.1901 0 22.1522 4.9621 22.1522 11.0761C22.1558 13.5892 21.3009 16.028 19.729 17.9888ZM17.2603 17.0757C18.8221 15.4695 19.6944 13.3165 19.6909 11.0761C19.6909 6.31584 15.8351 2.46136 11.0761 2.46136C6.31584 2.46136 2.46136 6.31584 2.46136 11.0761C2.46136 15.8351 6.31584 19.6909 11.0761 19.6909C13.3165 19.6944 15.4695 18.8221 17.0757 17.2603L17.2603 17.0757Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_100_26">
+                                    <rect width="25" height="25" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="header__select header__select--mobile">
+                <div>
+                    <select name="select-lang" id="select-lang" class="select-lang">
+                        <option value="RU" selected>RU</option>
+                        <option value="UA">UA</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="select-currency" id="select-currency" class="select-currency">
+                        <option value="UAH" selected>UAH</option>
+                        <option value="RUB">RUB</option>
+                        <option value="USD">USD</option>
+                    </select>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="header__hidden-menu">
-        <div class="header__hidden-icon">
-            <span></span>
-        </div>
-        <nav class="header__hidden-body">
-            <ul class="header__hidden-list">
-                <li><a href="#" class="header__hidden-link navlink">ОПЛАТА И ДОСТАВКА</a></li>
-                <li><a href="#" class="header__hidden-link navlink">УСЛОВИЯ ВОЗВРАТА</a></li>
-                <li><a href="#" class="header__hidden-link navlink">КОНТАКТЫ</a></li>
-            </ul>
-        </nav>
-    </div>
 
-    <div class="header__mobile-menu header__mobile-menu--main">
-        <div class="header__select">
-            <div>
-                <select name="select-lang" id="select-lang" class="select-lang">
-                    <option value="RU" selected>RU</option>
-                    <option value="UA">UA</option>
-                    <option value="EN">EN</option>
-                </select>
-            </div>
-            <div>
-                <select name="select-currency" id="select-currency" class="select-currency">
-                    <option value="UAH" selected>UAH</option>
-                    <option value="RUB">RUB</option>
-                    <option value="USD">USD</option>
-                </select>
-            </div>
-        </div>
-        <div class="search">
-            <input type="text" name="search" id="search" class="header__search" placeholder="Введите ваш запрос">
-            <div class="header__search-btn"><img src="" alt="" class="header__search-icon"></div>
-        </div>
+        <!-- * MOBILE NAVIGATION -->
+
         <nav class="header__mobile-body">
             <ul class="header__mobile-list">
                 <li><a href="#" class="header__mobile-link navlink">
@@ -113,7 +140,8 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        Личный кабинет</a></li>
+                        Личный кабинет</a>
+                </li>
                 <li><a href="#" class="header__mobile-link navlink">NEW</a></li>
                 <li><a href="#" class="header__mobile-link navlink">КАТАЛОГ</a></li>
                 <li><a href="#" class="header__mobile-link navlink">О НАС</a></li>
@@ -122,5 +150,6 @@
                 <li><a href="#" class="header__mobile-link navlink">КОНТАКТЫ</a></li>
             </ul>
         </nav>
+        @@include('_social.html',{})
     </div>
 </header>
