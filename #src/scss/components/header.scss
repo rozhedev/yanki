@@ -23,7 +23,7 @@
             left: 0;
             position: absolute;
             height: 4px;
-            transition: $normalAnimation;
+            transition: $normalTransition;
             background-color: $light-color;
         }
         &::before,
@@ -74,7 +74,7 @@
             padding: 32px 16px 26px;
             background-color: $light-color;
             box-shadow: 0 10px 15px rgba($color: $dark-color, $alpha: 0.64);
-            transition: $normalAnimation;
+            transition: $normalTransition;
         }
 
         &-icon {
@@ -132,7 +132,7 @@
     .search {
         opacity: 0;
         pointer-events: none;
-        transition: $normalAnimation;
+        transition: $normalTransition;
 
         &._active {
             opacity: 1;
@@ -173,6 +173,22 @@
         }
         &__menu-icon {
             order: 1;
+            &._active {
+                transition: $fastTransition;
+                span {
+                    opacity: 0;
+                    left: -200%;
+                }
+                &::before {
+                    top: 10px;
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    bottom: 10px;
+                    transform: rotate(-45deg);
+                    width: 100%;
+                }
+            }
         }
         &__select {
             order: 2;
@@ -226,6 +242,9 @@
                 position: relative;
                 display: block;
 
+                .search__close {
+                    display: none;
+                }
                 .search__inp {
                     padding: 10px 15px;
                 }
@@ -256,7 +275,7 @@
                 padding: 20px 20px 30px 20px;
                 background-color: $light-color;
                 overflow: auto !important;
-                transition: $fastAnimation;
+                transition: $fastTransition;
 
                 &._active {
                     opacity: 1;
@@ -274,7 +293,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: 50px;
+                margin: 50px 0 78px;
             }
             &-list {
                 width: 100%;

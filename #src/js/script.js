@@ -1,8 +1,7 @@
-const functions = require('./modules/functions.js');
+const validation = require('./modules/validation.js');
 const select = require('./components/select.js');
 const burger = require('./components/burger.js');
-
-console.log(functions(40, 24));
+const spoilers = require('./components/spoilers.js');
 
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
@@ -31,3 +30,5 @@ const swiper = new Swiper('.swiper', {
         },
     },
 });
+
+// * Call validation function

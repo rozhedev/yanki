@@ -37,7 +37,6 @@ const lgContainer = 980;
 
 if (iconMenu && document.documentElement.clientWidth > lgContainer) {
     iconMenu.addEventListener("click", function (e) {
-        console.log(document.documentElement.clientWidth);
         menuBody.classList.add("_active");
     });
     iconClose.addEventListener("click", function (e) {
@@ -47,7 +46,7 @@ if (iconMenu && document.documentElement.clientWidth > lgContainer) {
 
 const mobileMenu = document.querySelector(".header__mobile-menu")
 
-if (iconMenu && document.documentElement.clientWidth < lgContainer) {
+if (iconMenu && document.documentElement.clientWidth <= lgContainer) {
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle("_lock");
         iconMenu.classList.toggle("_active");

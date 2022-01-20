@@ -25,61 +25,55 @@
 
             <!-- * CATEGORIES -->
 
-            <section class="categories section">
+            <section class="categories-sect section">
                 <div class="_container">
-                    <h2 class="categories__title h2">Категории</h2>
+                    <h2 class="categories-sect__title h2">Категории</h2>
 
-                    <div class="swiper categories__slider">
-                        <div class="swiper-wrapper categories__slider-wrapper">
+                    <div class="swiper categories-sect__slider">
+                        <div class="swiper-wrapper categories-sect__slider-wrapper">
 
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman1.jpg" alt="woman1">
-                                <div class="categories__slide-content"><span>Куртки</span></div>
+                                <div class="categories-sect__slide-content"><span>Куртки</span></div>
 
                             </div>
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman2.jpg" alt="woman2">
-                                <div class="categories__slide-content"><span>Пальто</span></div>
+                                <div class="categories-sect__slide-content"><span>Пальто</span></div>
 
                             </div>
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman3.jpg" alt="woman3">
-                                <div class="categories__slide-content"><span>Шубы</span></div>
+                                <div class="categories-sect__slide-content"><span>Шубы</span></div>
                             </div>
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman4.jpg" alt="woman4">
-                                <div class="categories__slide-content"><span>Парки</span></div>
+                                <div class="categories-sect__slide-content"><span>Парки</span></div>
                             </div>
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman1.jpg" alt="woman1">
-                                <div class="categories__slide-content"><span>Куртки2</span></div>
+                                <div class="categories-sect__slide-content"><span>Куртки2</span></div>
                             </div>
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman2.jpg" alt="woman2">
-                                <div class="categories__slide-content"><span>Пальто2</span></div>
+                                <div class="categories-sect__slide-content"><span>Пальто2</span></div>
                             </div>
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman3.jpg" alt="woman3">
-                                <div class="categories__slide-content"><span>Шубы2</span></div>
+                                <div class="categories-sect__slide-content"><span>Шубы2</span></div>
                             </div>
-                            <div class="swiper-slide categories__slide">
+                            <div class="swiper-slide categories-sect__slide">
                                 <img src="../img/photos/categories/woman4.jpg" alt="woman4">
-                                <div class="categories__slide-content"><span>Парки2</span></div>
+                                <div class="categories-sect__slide-content"><span>Парки2</span></div>
                             </div>
                         </div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
-
-                    <div class="subscribe section">
-                        <h2 class="subscribe__title h2">Узнайте  первым о новинках</h2>
-                        <input type="text" name="email" id="email" class="subscribe__inp inp" placeholder="Ваш e-mail*">
-                        <button class="subscribe__btn btn">ПОДПИСАТЬСЯ</button>
-                        <div class="subscribe__descr">Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих персональных данных и ознакомлен(а) с условиями конфиденциальности.
-                        </div>
-                    </div>
                 </div>
             </section>
+
+            @@include('components/_subscribe.html',{})
         </main>
 
         <!-- * FOOTER -->

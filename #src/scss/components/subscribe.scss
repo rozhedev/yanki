@@ -1,0 +1,60 @@
+// * SUBSCRIBE
+
+.subscribe {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 0 100px 0;
+    text-align: center;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        &-inp {
+            margin-top: 50px;
+            transition: $normalTransition;
+        }
+        &-message {
+            opacity: 0;
+            transition: $normalTransition;
+            visibility: hidden;
+            margin-top: 5px;
+        }
+        &-btn {
+            margin: 15px 0 30px;
+        }
+
+        &._error {
+            .subscribe__form-inp {
+                border-color: $error-red;
+            }
+            .subscribe__form-message {
+                opacity: 1;
+                visibility: visible;
+                color: $error-red;
+            }
+        }
+        &._success {
+            .subscribe__form-inp {
+                border-color: $success-green;
+            }
+        }
+    }
+    &__descr {
+        font-weight: 200;
+    }
+
+    @include media768 {
+        &__form {
+            &-inp {
+                margin-top: 30px;
+            }
+            &-btn {
+                margin: 15px 0;
+            }
+        }
+    }
+    @include media375 {
+       
+    }
+}

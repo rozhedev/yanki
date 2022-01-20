@@ -1,4 +1,4 @@
-.categories {
+.categories-sect {
     &__title {
         margin-bottom: 50px;
     }
@@ -54,37 +54,5 @@
                 height: 230px;
             }
         }
-    }
-}
-
-// * SUBSCRIBE
-
-.subscribe {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 600px;
-    text-align: center;
-
-    &__inp {
-        margin-top: 50px;
-    }
-
-    &__btn {
-        margin: 20px 0;
-    }
-    &__descr {
-        font-weight: 200;
-    }
-    @include media768 {
-        &__inp {
-            margin-top: 30px;
-        }
-        &__btn {
-            margin: 15px 0;
-        }
-    }
-    @include media375 {
-        width: 100%;
     }
 }
