@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html',{
+"title":"Каталог"
+})
+
+<body>
+    <div class="wrapper">
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+
+        <aside class="sidebar"></aside>
+
+        <main class="main page" id="main">
+            <section class="catalog">
+                <!-- * HEADER -->
+                @@include('components/_header-dark.html',{})
+            </section>
+        </main>
+
+        <!-- * FOOTER -->
+        @@include('components/_footer.html',{})
+    </div>
+
+    <!-- * POPUP -->
+    <!-- @@include('_popup.html',{}) -->
+    <!-- * JS -->
+    @@include('_js.html',{})
+</body>
+
+</html>

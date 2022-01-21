@@ -48,18 +48,20 @@ function isEmail(email) {
 
 // * Call functions
 
-subscribeEmail.addEventListener('input', function (e) {
-    console.log(true)
-    e.preventDefault();
-    e = event.currentTarget;
-    if (subscribeEmail && e == subscribeEmail) {
-        setTimeout(function () {
-            checkEmail(subscribeEmail);
-        }, shortInterval);
-    }
-});
+if (subscribeForm) {
+    subscribeEmail.addEventListener('input', function (e) {
+        console.log(true)
+        e.preventDefault();
+        e = event.currentTarget;
+        if (subscribeEmail && e == subscribeEmail) {
+            setTimeout(function () {
+                checkEmail(subscribeEmail);
+            }, shortInterval);
+        }
+    });
 
-subscribeForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    checkEmail(subscribeEmail);
-});
+    subscribeForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        checkEmail(subscribeEmail);
+    });
+}

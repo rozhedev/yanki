@@ -147,6 +147,17 @@
         }
     }
 
+    &--dark {
+        .header__menu-link {
+            color: $dark-color;
+        }
+        .header__buttons {
+            path {
+                fill: $dark-color;
+            }
+        }
+    }
+
     // * 1024
 
     @include media1024 {

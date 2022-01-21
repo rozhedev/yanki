@@ -1,12 +1,3 @@
-.categories-sect {
-    &__title {
-        margin-bottom: 50px;
-    }
-    @include media768 {
-        margin-bottom: 30px;
-    }
-}
-
 .swiper {
     width: 100%;
     height: 450px;
@@ -30,7 +21,10 @@
     }
 }
 
-.categories {
+.categories-sect {
+    &__title {
+        margin-bottom: 50px;
+    }
     &__slide {
         font-size: 20px;
         &-content {
@@ -46,6 +40,9 @@
         }
     }
     @include media768 {
+        &__title {
+            margin-bottom: 30px;
+        }
         &__slide {
             font-size: 18px;
             height: 230px;
