@@ -1,3 +1,5 @@
+// * COMMON CONST
+
 const validation = require('./modules/validation.js');
 const select = require('./components/select.js');
 const burger = require('./components/burger.js');

@@ -2,38 +2,31 @@
     &__spoilers {
         display: flex;
         justify-content: space-between;
-
-        &-btn {
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            
-            svg {
-                display: none;
-            }
-        }
-        &-nav {
-            li {
-                display: block;
-                margin-top: 10px;
-
-                &:first-child {
-                    margin-top: 20px;
-                }
-            }
-        }
     }
     .contacts {
-        margin-top: 20px;
+        margin-top: 10px;
         justify-content: start;
-        text-align: left;
 
         .social-icons {
             justify-content: start;
         }
     }
+    &__contacts {
+        margin-top: 20px;
+    }
     &__copyright {
         margin: 50px auto 20px;
         text-align: center;
+    }
+
+    @include media768 {
+        &__spoilers {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__contacts-title {
+            text-align: center;
+            font-size: 18px;
+        }
     }
 }

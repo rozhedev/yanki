@@ -53,3 +53,16 @@ if (iconMenu && document.documentElement.clientWidth <= lgContainer) {
         mobileMenu.classList.toggle("_active");
     });
 }
+
+
+// * Меняем шапку на других страницах
+
+const homeSect = document.getElementById("home");
+
+if (homeSect) {
+    const header = document.querySelector("#home .header__inner");
+    const logoImg = document.querySelector(".header__body .logo img");
+
+    header.classList.add("header__inner--light");
+    logoImg.setAttribute("src", "img/logo/home-logo.svg");
+}

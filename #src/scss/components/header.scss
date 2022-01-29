@@ -24,7 +24,7 @@
             position: absolute;
             height: 4px;
             transition: $normalTransition;
-            background-color: $light-color;
+            background-color: $primary-accent-color;
         }
         &::before,
         &::after {
@@ -52,7 +52,7 @@
             display: flex;
         }
         &-link {
-            color: $light-color;
+            color: $dark-color;
             margin-left: 26px;
         }
     }
@@ -73,7 +73,7 @@
             width: 100%;
             padding: 32px 16px 26px;
             background-color: $light-color;
-            box-shadow: 0 10px 15px rgba($color: $dark-color, $alpha: 0.64);
+            box-shadow: 0 10px 15px rgba($color: $dark-color, $alpha: 0.07);
             transition: $normalTransition;
         }
 
@@ -83,7 +83,7 @@
             }
             &::after,
             &::before {
-                top: 10px;
+                top: 8px;
                 background-color: $primary-accent-color;
             }
             &::before {
@@ -107,13 +107,34 @@
             pointer-events: auto;
         }
     }
+
     .logo {
         display: block;
     }
+
+    // * SELECT STYLISATION
+
     &__select {
         display: flex;
-        div:not(:first-child) {
+        form:not(:first-child) {
             padding-left: 10px;
+        }
+        .select {
+            &__value {
+                color: $dark-color;
+                &::before {
+                    background: url("../../img/icons/chevron-bottom-dark.svg") center / 100% no-repeat;
+                }
+            }
+            &__option {
+                color: $dark-color;
+            }
+            &__close {
+                color: $dark-color;
+                &:hover {
+                    color: $primary-accent-color;
+                }
+            }
         }
     }
     &__buttons {
@@ -122,6 +143,14 @@
             &:not(:first-child) {
                 margin-left: 30px;
             }
+            path {
+                fill: $primary-accent-color;
+            }
+            &:first-child {
+                path {
+                    fill: $dark-color;
+                }
+            }
         }
     }
     &__mobile-menu {
@@ -129,11 +158,14 @@
         pointer-events: none;
         display: none;
     }
+
+    // * SEARCH
+
     .search {
         opacity: 0;
         pointer-events: none;
         transition: $normalTransition;
-
+        
         &._active {
             opacity: 1;
             pointer-events: auto;
@@ -147,14 +179,51 @@
         }
     }
 
-    &--dark {
-        .header__menu-link {
-            color: $dark-color;
-        }
-        .header__buttons {
-            path {
-                fill: $dark-color;
+    //  * LIGHT HEADER
+
+    &__inner--light {
+        .header {
+            &__menu-icon {
+                & span,
+                &::before,
+                &::after {
+                    background-color: $light-color;
+                }
             }
+            &__menu-link {
+                color: $light-color;
+                &:hover {
+                    color: $primary-accent-color;
+                }
+            }
+            &__buttons-item {
+                path {
+                    fill: $light-color;
+                }
+            }
+        }
+        .select {
+            &__value {
+                color: $light-color;
+                &::before {
+                    background: url("../../img/icons/chevron-bottom.svg") center / 100% no-repeat;
+                }
+            }
+            &__option {
+                color: $light-color;
+            }
+            &__close {
+                color: $light-color;
+                &:hover {
+                    color: $primary-accent-color;
+                }
+            }
+        }
+        .search__close {
+            color: $light-color;
+        }
+        .header__hidden-menu {
+            box-shadow: 0 10px 15px rgba($color: $dark-color, $alpha: 0.64);
         }
     }
 
@@ -223,7 +292,7 @@
                 display: flex;
                 justify-content: center;
 
-                div:not(:first-child) {
+                form:not(:first-child) {
                     padding-left: 3px;
                 }
                 .select__title,
