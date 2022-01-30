@@ -1,0 +1,73 @@
+.refund {
+    &__descr {
+        margin-top: 5px;
+        &:first-of-type {
+            margin-top: 20px;
+        }
+    }
+    &__terms {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 165px;
+            text-align: center;
+
+            &:not(:last-of-type) {
+                margin-right: 30px;
+            }
+        }
+        &-descr {
+            margin-top: 10px;
+        }
+    }
+
+    @include media1024 {
+        &__terms {
+            flex-wrap: wrap;
+
+            &-item {
+                &:not(:last-of-type) {
+                    margin-right: 19px;
+                }
+                &:nth-of-type(n + 6) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    @include media768 {
+        &__terms {
+            justify-content: start;
+            &-item:nth-of-type(n + 5) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @include media375 {
+        &__descr:first-of-type {
+            margin-top: 15px;
+        }
+        &__terms {
+            flex-direction: column;
+            align-items: center;
+
+            &-item {
+                width: 100%;
+                
+                &:not(:first-of-type) {
+                    margin-top: 15px;
+                }
+                &:not(:last-of-type) {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html',{
+"title":"Обмен и возврат"
+})
+
+<body>
+    <div class="wrapper">
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+
+        <main class="main page">
+            <section class="refund">
+                <!-- * HEADER -->
+                @@include('components/_header.html',{})
+
+                <div class="refund__inner _container section-page">
+                    @@include('components/_breadcrumbs.html',{
+                    "item1":"Главная",
+                    "item2":"Обмен и возврат"
+                    })
+
+                    <div class="page-content">
+                        <h2 class="refund__title h3">Обмен и возврат</h2>
+
+                        <p class="refund__descr">
+                            Если вам не подошел заказ, мы с удовольствием вам его обменяем или примем возврат
+                        </p>
+                        <p class="refund__descr">Обмен и возврат возможен в случае:</p>
+
+                        <div class="refund__terms">
+                            <div class="refund__terms-item">
+                                <img src="../img/icons/refund/price-tag.svg" alt="ценник" class="refund__terms-img">
+                                <div class="refund__terms-descr">
+                                    если заказ не был использован и сохранил товарный вид(в том числе не нарушены бирки,
+                                    ярлыки, упаковочные материалы)
+                                </div>
+                            </div>
+                            <div class="refund__terms-item">
+                                <img src="../img/icons/refund/time.svg" alt="часы" class="refund__terms-img">
+                                <div class="refund__terms-descr">
+                                    возврат и обмен осуществляется в течение двух дней с момента получения заказа
+                                </div>
+                            </div>
+                            <div class="refund__terms-item">
+                                <img src="../img/icons/refund/scooter.svg" alt="скутер" class="refund__terms-img">
+                                <div class="refund__terms-descr">
+                                    возврат и обмен товара возможен только при отправке по Украине
+                                </div>
+                            </div>
+                            <div class="refund__terms-item">
+                                <img src="../img/icons/refund/blank.svg" alt="бланк" class="refund__terms-img">
+                                <div class="refund__terms-descr">
+                                    бланк возврата присутствует в каждой посылке
+                                </div>
+                            </div>
+                            <div class="refund__terms-item">
+                                <img src="../img/icons/refund/money.svg" alt="деньги" class="refund__terms-img">
+                                <div class="refund__terms-descr">
+                                    все расходы по обмену и возврату товара несет покупатель
+                                </div>
+                            </div>
+                            <div class="refund__terms-item">
+                                <img src="../img/icons/refund/card.svg" alt="банковская карта"
+                                    class="refund__terms-img">
+                                <div class="refund__terms-descr">
+                                    после получения возврата мы делаем перевод денежных средств на карту клиента
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- * FOOTER -->
+        @@include('components/_footer.html',{})
+    </div>
+
+    <!-- * POPUP -->
+    <!-- @@include('_popup.html',{}) -->
+    <!-- * JS -->
+    @@include('_js.html',{})
+</body>
+
+</html>

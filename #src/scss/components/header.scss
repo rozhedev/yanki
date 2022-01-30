@@ -165,7 +165,7 @@
         opacity: 0;
         pointer-events: none;
         transition: $normalTransition;
-        
+
         &._active {
             opacity: 1;
             pointer-events: auto;
@@ -199,6 +199,20 @@
             &__buttons-item {
                 path {
                     fill: $light-color;
+                    transition: $normalTransition;
+                }
+                &:hover {
+                    path {
+                        fill: $primary-accent-color;
+                    }
+                }
+
+                @include media768 {
+                    &:hover {
+                        path {
+                            fill: $light-color;
+                        }
+                    }
                 }
             }
         }

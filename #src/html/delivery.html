@@ -11,15 +11,76 @@
             <div class="loader"></div>
         </div>
 
-        <aside class="sidebar"></aside>
-
-        <main class="main page" id="main">
+        <main class="main page">
             <section class="delivery">
                 <!-- * HEADER -->
                 @@include('components/_header.html',{})
 
-                <div class="delivery__inner _container">
-                    <h2 class="h3">Оплата и доставка</h2>
+                <div class="delivery__inner _container section-page">
+                    @@include('components/_breadcrumbs.html',{
+                    "item1":"Главная",
+                    "item2":"Оплата и доставка"
+                    })
+
+                    <div class="page-content">
+                        <h2 class="delivery__title h3">Оплата и доставка</h2>
+
+                        <div class="delivery__content">
+                            <div class="delivery__col">
+                                <p class="delivery__col-descr">Вы можете оплатить покупку одним из ниже перечисленных
+                                    способов:</p>
+                                <ul class="unordered-list">
+                                    <li class="unordered-list__item">
+                                        наложенным платежом в отделении Новой Почты
+                                    </li>
+                                    <li class="unordered-list__item">
+                                        денежным переводом Visa/MasterCard
+                                    </li>
+                                    <li class="unordered-list__item">
+                                        полная предоплата через Приват 24
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="delivery__col">
+                                <p class="delivery__col-descr">Мы готовы предложить несколько вариантов доставки: </p>
+                                <ul class="unordered-list">
+                                    <li class="unordered-list__item">
+                                        отправка по всей Украине в отделение Новой Почты (1-2 дня)
+                                    </li>
+                                    <li class="unordered-list__item">
+                                        международные сервисы доставки для жителей зарубежья: Укрпочта (1-3 недели, DHL
+                                        (3-7
+                                        дней)
+                                    </li>
+                                    <li class="unordered-list__item">
+                                        Срок доставки: 1–2 дня с момента заказа
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="delivery__ordering">
+                            <p class="delivery__ordering-descr">Процесс оформления заказа с помощью LIQPAY:</p>
+
+                            <div class="delivery__ordering-content">
+                                <div class="delivery__step">
+                                    <img src="../img/icons/num/num1.svg" alt="step 1" class="delivery__step-img">
+                                    <div class="delivery__step-descr">Выбрать в корзине способ оплаты "LIQPAY";</div>
+                                </div>
+                                <div class="delivery__step">
+                                    <img src="../img/icons/num/num2.svg" alt="step 2" class="delivery__step-img">
+                                    <div class="delivery__step-descr">Подтвердить заказ;</div>
+                                </div>
+                                <div class="delivery__step">
+                                    <img src="../img/icons/num/num3.svg" alt="step 3" class="delivery__step-img">
+                                    <div class="delivery__step-descr">После этого Вас перенаправит на сайт LIQPAY, где
+                                        вы выбираете удобный для вас способ оплаты: через Приват24, или с помощью карты
+                                        Mastercard/VISA со всего мира. </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

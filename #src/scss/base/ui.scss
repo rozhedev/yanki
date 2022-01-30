@@ -8,6 +8,14 @@
     }
 }
 
+.section-page {
+    padding: 30px 0 60px;
+
+    @include media375 {
+        padding: 15px 0 60px;
+    }
+}
+
 .h1 {
     font-weight: 300;
     font-size: 46px;
@@ -45,6 +53,14 @@
     font-size: 16px;
     line-height: 19px;
     color: $dark-color;
+}
+
+.page-content {
+    margin-top: 30px;
+
+    @include media375 {
+        margin-top: 15px;
+    }
 }
 
 .text {
@@ -109,12 +125,17 @@
     text-transform: uppercase;
     color: $light-color;
     background-color: $primary-accent-color;
+    transition: $normalTransition;
+    
+    &:hover {
+        box-shadow: 0 5px 7px rgba($color: $dark-color, $alpha: 0.15);
+    }
 
     @include media768 {
         height: 40px;
         font-size: 14px;
         &:hover {
-            color: $dark-color;
+            box-shadow: none;
         }
     }
 }

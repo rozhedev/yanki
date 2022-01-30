@@ -1,0 +1,28 @@
+.breadcrumbs {
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-of-type)::after {
+            content: "\203a";
+            margin: 0 5px;
+            color: $primary-accent-color;
+            font-weight: bold;
+        }
+        &:hover {
+            a {
+                transition: $normalTransition;
+                color: $primary-accent-color;
+            }
+        }
+    }
+    
+    @include media768 {
+        .breadcrumbs__item a {
+            font-size: 16px;
+        }
+        &:hover {
+            color: $light-color;
+        }
+    }
+}
