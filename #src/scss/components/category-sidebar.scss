@@ -1,0 +1,50 @@
+.category-sidebar {
+    margin-right: 30px;
+    &__btn {
+        display: flex;
+    }
+    &__title {
+        margin-right: 5px;
+    }
+    &__nav-link {
+        display: block;
+        margin-top: 20px;
+    }
+
+    @include media375 {
+        margin-right: 0;
+        width: 100%;
+        &__btn {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-accent-color;
+        }
+        &__title {
+            color: $light-color;
+        }
+        &__nav {
+            opacity: 0;
+            overflow: hidden;
+            height: 0;
+            text-align: center;
+            transition: $normalTransition;
+
+            &-link {
+                font-size: 16px;
+            }
+        }
+        &._active {
+            .category-sidebar__nav {
+                opacity: 1;
+                overflow: visible;
+                min-height: 500px;
+                height: inherit;
+            }
+            .chevron-bottom {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

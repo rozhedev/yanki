@@ -9,8 +9,7 @@ $min-width: 375;
 // * BREAKPOINTS
 $big-tablet: 1024.02;
 $little-tablet: 992.02;
-$fold-phone: 720.02;
-$phone: 720.02; // 512.02
+$phone: 720.02;
 
 // * CONTAINERS
 // Макс. ширина контейнера с учетом padding, чтобы контент не прилипал к краям при адаптиве
@@ -19,7 +18,6 @@ $phone: 720.02; // 512.02
 $xl: 1140 + 40;
 $lg: 959.98 + 20;
 $md: 719.98 + 20;
-// $ms: 512.02 + 20;
 $sm: 334.98 + 20;
 
 // * COLORS
@@ -36,5 +34,6 @@ $error-red: #C35354;
 // * EFFECTS
 $normalTransition: .6s all;
 $fastTransition: .4s all;
+$border: 0.3px solid $dark-color;
 
 // * OTHER

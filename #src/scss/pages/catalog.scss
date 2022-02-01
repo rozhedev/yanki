@@ -1,0 +1,13 @@
+.catalog {
+    &__wrapper {
+        display: flex;
+    }
+
+    
+
+    @include media375 {
+        &__wrapper {
+            flex-direction: column;
+        }
+    }
+}

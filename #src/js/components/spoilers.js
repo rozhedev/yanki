@@ -1,5 +1,6 @@
 const spoilerTriggers = document.querySelectorAll(".spoiler__trigger");
 const spoilerItems = document.querySelectorAll(".spoiler");
+
 const lgContainer = 980;
 
 function openAccordion(activeItem, items) {

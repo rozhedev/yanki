@@ -28,23 +28,27 @@ $pathIcon: "../../img/icons/chevron-bottom.svg";
             content: "";
             display: inline-block;
             transition: all 0.3s ease 0s;
-            margin-left: 3px;
+            margin-left: 5px;
             width: 20px;
             height: 20px;
             background: url($pathIcon) center / 100% no-repeat;
             transform: rotate(0deg);
+            @include media375 {
+                margin-left: 3px;
+            }
         }
     }
     &__options {
-        color: $light-color;
         display: none;
         position: absolute;
         top: 30px;
         min-width: 100%;
         left: 0;
+        color: $light-color;
         font-size: 16px;
     }
     &__option {
+        text-align: center;
         cursor: pointer;
         padding: 3px 12px;
         border-top: 1px solid $primary-accent-color;

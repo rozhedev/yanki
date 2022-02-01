@@ -114,7 +114,7 @@
 
     // * SELECT STYLISATION
 
-    &__select {
+    &-select {
         display: flex;
         form:not(:first-child) {
             padding-left: 10px;
@@ -137,6 +137,9 @@
             }
         }
     }
+
+    // * BUTTONS
+
     &__buttons {
         display: flex;
         &-item {
@@ -189,6 +192,13 @@
                 &::after {
                     background-color: $light-color;
                 }
+                &:hover {
+                    & span,
+                    &::before,
+                    &::after {
+                        background-color: $primary-accent-color;
+                    }
+                }
             }
             &__menu-link {
                 color: $light-color;
@@ -225,12 +235,6 @@
             }
             &__option {
                 color: $light-color;
-            }
-            &__close {
-                color: $light-color;
-                &:hover {
-                    color: $primary-accent-color;
-                }
             }
         }
         .search__close {
@@ -284,7 +288,7 @@
                 }
             }
         }
-        &__select {
+        &-select {
             order: 2;
         }
         .logo {
@@ -297,7 +301,7 @@
         &__menu {
             display: none;
         }
-        &__select {
+        &-select {
             display: none;
 
             // * SELECT MOBILE

@@ -34,6 +34,7 @@ const iconClose = document.querySelector(".header__hidden-icon");
 const menuBody = document.querySelector(".header__hidden-menu");
 
 const lgContainer = 980;
+const smContainer = 720;
 
 if (iconMenu && document.documentElement.clientWidth > lgContainer) {
     iconMenu.addEventListener("click", function (e) {
@@ -65,4 +66,26 @@ if (homeSect) {
 
     header.classList.add("header__inner--light");
     logoImg.setAttribute("src", "img/logo/home-logo.svg");
+}
+
+// * Sidebar в каталоге
+
+const categorySidebar = document.querySelector(".category-sidebar");
+const categorySidebarBtn = document.querySelector(".category-sidebar__btn");
+
+if (categorySidebar && document.documentElement.clientWidth < smContainer) {
+    categorySidebarBtn.addEventListener("click", () => {
+        categorySidebar.classList.toggle('_active');
+    });
+}
+
+// * Фильтры в каталоге
+
+const productFilters = document.querySelector(".product-filters");
+const productFiltersBtn = document.querySelector(".product-filters__btn");
+
+if (productFilters && document.documentElement.clientWidth < smContainer) {
+    productFiltersBtn.addEventListener("click", () => {
+        productFilters.classList.toggle('_active');
+    });
 }
