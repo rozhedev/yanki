@@ -1,0 +1,126 @@
+.product-card {
+    width: 310px;
+    height: 460px;
+    &__cont {
+        position: relative;
+    }
+    &__img {
+        width: 310px;
+        height: 360px;
+    }
+    &__like {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: $primary-accent-color;
+        border-radius: 0 0 0 20px;
+
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    &__content {
+        margin-top: 15px;
+        text-align: center;
+    }
+    &__title--new {
+        &::after {
+            content: "new";
+            display: inline-block;
+            margin-left: 10px;
+            color: $primary-accent-color;
+        }
+    }
+    &__price {
+        margin: 5px 0;
+        font-variant-numeric: lining-nums;
+        font-weight: 700;
+    }
+    &__size {
+        &-btn {
+            color: rgba($color: $dark-color, $alpha: 0.5);
+            text-transform: uppercase;
+
+            &:not(:last-of-type) {
+                margin-right: 5px;
+            }
+        }
+    }
+    &__color {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+
+        &-btn {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            &:not(:last-of-type) {
+                margin-right: 5px;
+            }
+            &:nth-of-type(1) {
+                border: $border;
+            }
+            &:nth-of-type(2) {
+                background-color: $catalog-color-blue;
+            }
+            &:nth-of-type(3) {
+                background-color: $catalog-color-yellow;
+            }
+        }
+    }
+
+    // * MEDIA
+
+    @include media1024 {
+        width: 185px;
+        height: 326px;
+
+        &__img {
+            width: 185px;
+            height: 216px;
+        }
+        &__like {
+            width: 35px;
+            height: 35px;
+
+            svg {
+                height: 15px;
+                width: 15px;
+            }
+        }
+        &__size {
+            &-btn {
+                color: rgba($color: $dark-color, $alpha: 0.5);
+                &:not(:last-of-type) {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    @include media768 {
+        &__content {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+    @include media375 {
+        width: 172px;
+        height: 320px;
+
+        &__img {
+            width: 172px;
+            height: 230px;
+        }
+        &__content {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+}

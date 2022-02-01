@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html',{
+"title":"Страница продукта"
+})
+
+<body>
+    <div class="wrapper">
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+
+        <main class="main page">
+            <section class="products-page">
+                <!-- * HEADER -->
+                @@include('components/_header.html',{})
+
+                <div class="products-page__inner _container section-page">
+                    @@include('components/_breadcrumbs.html',{
+                    "item1":"Главная",
+                    "item2":"Страница продукта"
+                    })
+
+                    <div class="products-page__content page-content">
+                        
+                    </div>
+            </section>
+        </main>
+
+        <!-- * FOOTER -->
+        @@include('components/_footer.html',{})
+    </div>
+
+    <!-- * POPUP -->
+    <!-- @@include('_popup.html',{}) -->
+    <!-- * JS -->
+    @@include('_js.html',{})
+</body>
+
+</html>

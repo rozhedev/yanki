@@ -33,52 +33,58 @@
                             <!-- * FILTERS -->
 
                             @@include('components/_product-filters.html', {
-                                "size.id": "select-size",
-                                "size.title": "Размер",
-                                "size.values.value1": "XXS",
-                                "size.values.value2": "XS",
-                                "size.values.value3": "S",
-                                "size.values.value4": "M",
-                                "size.values.value5": "L",
-                                "size.labels.label1": "XXS",
-                                "size.labels.label2": "XS",
-                                "size.labels.label3": "S",
-                                "size.labels.label4": "M",
-                                "size.labels.label5": "L",
+                            "size.id": "select-size",
+                            "size.title": "Размер",
+                            "size.values.value1": "XXS",
+                            "size.values.value2": "XS",
+                            "size.values.value3": "S",
+                            "size.values.value4": "M",
+                            "size.values.value5": "L",
+                            "size.labels.label1": "XXS",
+                            "size.labels.label2": "XS",
+                            "size.labels.label3": "S",
+                            "size.labels.label4": "M",
+                            "size.labels.label5": "L",
 
-                                "color.id": "select-color",
-                                "color.title": "Цвет",
-                                "color.values.value1": "white",
-                                "color.values.value2": "black",
-                                "color.values.value3": "blue",
-                                "color.values.value4": "red",
-                                "color.values.value5": "beige",
-                                "color.labels.label1": "Белый",
-                                "color.labels.label2": "Черный",
-                                "color.labels.label3": "Синий",
-                                "color.labels.label4": "Красный",
-                                "color.labels.label5": "Бежевый",
+                            "color.id": "select-color",
+                            "color.title": "Цвет",
+                            "color.values.value1": "white",
+                            "color.values.value2": "black",
+                            "color.values.value3": "blue",
+                            "color.values.value4": "red",
+                            "color.values.value5": "beige",
+                            "color.labels.label1": "Белый",
+                            "color.labels.label2": "Черный",
+                            "color.labels.label3": "Синий",
+                            "color.labels.label4": "Красный",
+                            "color.labels.label5": "Бежевый",
 
-                                "price.id": "select-price",
-                                "price.title": "Цена",
-                                "price.values.value1": "from5000to10000",
-                                "price.values.value2": "from10000to15000",
-                                "price.values.value3": "from15000to20000",
-                                "price.values.value4": "from20000to25000",
-                                "price.labels.label1": "5000-10000",
-                                "price.labels.label2": "10000-15000",
-                                "price.labels.label3": "15000-20000",
-                                "price.labels.label4": "20000-25000",
-           
-                                "sort-params.id": "select-params",
-                                "sort-params.title": "Сортировать по",
-                                "sort-params.values.value1": "from-ch-to-ex",
-                                "sort-params.values.value2": "from-ex-to-ch",
-                                "sort-params.values.value3": "sort-materials",
-                                "sort-params.labels.label1": "От дешевого к дорогому",
-                                "sort-params.labels.label2": "От дорогого к дешевому",
-                                "sort-params.labels.label3":"По материалу"
-                                })
+                            "price.id": "select-price",
+                            "price.title": "Цена",
+                            "price.values.value1": "from5000to10000",
+                            "price.values.value2": "from10000to15000",
+                            "price.values.value3": "from15000to20000",
+                            "price.values.value4": "from20000to25000",
+                            "price.labels.label1": "5000-10000",
+                            "price.labels.label2": "10000-15000",
+                            "price.labels.label3": "15000-20000",
+                            "price.labels.label4": "20000-25000",
+
+                            "sort-params.id": "select-params",
+                            "sort-params.title": "Сортировать по",
+                            "sort-params.values.value1": "from-ch-to-ex",
+                            "sort-params.values.value2": "from-ex-to-ch",
+                            "sort-params.values.value3": "sort-materials",
+                            "sort-params.labels.label1": "От дешевого к дорогому",
+                            "sort-params.labels.label2": "От дорогого к дешевому",
+                            "sort-params.labels.label3":"По материалу"
+                            })
+
+                            <!-- * PRODUCTS CARD -->
+
+                            <div class="catalog-product__content">
+                                @@include('components/_product-card.html')
+                            </div>
                         </div>
                     </div>
             </section>
