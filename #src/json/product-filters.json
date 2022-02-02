@@ -1,0 +1,58 @@
+[
+    {
+        "id": "select-size",
+        "title": "Размер",
+        "value1": "XXS",
+        "value2": "XS",
+        "value3": "S",
+        "value4": "M",
+        "value5": "L",
+        "label1": "XXS",
+        "label2": "XS",
+        "label3": "S",
+        "label4": "M",
+        "label5": "L"
+    },
+    {
+        "id": "select-color",
+        "title": "Цвет",
+        "value1": "white",
+        "value2": "black",
+        "value3": "blue",
+        "value4": "red",
+        "value5": "beige",
+        "label1": "Белый",
+        "label2": "Черный",
+        "label3": "Синий",
+        "label4": "Красный",
+        "label5": "Бежевый"
+    },
+    {
+        "id": "select-price",
+        "title": "Цена",
+        "value1": "from1000to5000",
+        "value2": "from5000to10000",
+        "value3": "from10000to15000",
+        "value4": "from15000to20000",
+        "value5": "from20000to25000",
+        "label1": "1000-5000",
+        "label2": "5000-10000",
+        "label3": "10000-15000",
+        "label4": "15000-20000",
+        "label5": "20000-25000"
+    },
+    {
+        "id": "select-params",
+        "title": "Сортировать по",
+        "value1": "from-ch-to-ex",
+        "value2": "from-ex-to-ch",
+        "value3": "sort-materials",
+        "value4": "only-new",
+        "value5": "date-entry",
+        "label1": "От дешевого к дорогому",
+        "label2": "От дорогого к дешевому",
+        "label3": "По материалу",
+        "label4": "Только новые",
+        "label5": "Дате поступления"
+    }
+]

@@ -18,6 +18,10 @@
                 background: url("../../img/icons/chevron-bottom-dark.svg") center / 100% no-repeat;
             }
         }
+        &__options {
+            padding: 0 5px;
+            background-color: $light-color;
+        }
         &__option {
             color: $dark-color;
             padding: 3px;

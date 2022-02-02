@@ -1,14 +1,13 @@
 .product-card {
     width: 310px;
     height: 460px;
-    &__cont {
-        position: relative;
-    }
+    position: relative;
     &__img {
         width: 310px;
         height: 360px;
     }
     &__like {
+        z-index: 3;
         position: absolute;
         top: 0;
         right: 0;
@@ -19,10 +18,18 @@
         height: 40px;
         background-color: $primary-accent-color;
         border-radius: 0 0 0 20px;
+        cursor: pointer;
 
         svg {
             height: 20px;
             width: 20px;
+        }
+        &:hover {
+            box-shadow: none;
+        }
+        &:active {
+            background-color: $secondary-accent-color;
+            box-shadow: inset 0 5px 7px rgba($color: $dark-color, $alpha: 0.15);
         }
     }
     &__content {
@@ -52,29 +59,6 @@
             }
         }
     }
-    &__color {
-        display: flex;
-        justify-content: center;
-        margin-top: 5px;
-
-        &-btn {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            &:not(:last-of-type) {
-                margin-right: 5px;
-            }
-            &:nth-of-type(1) {
-                border: $border;
-            }
-            &:nth-of-type(2) {
-                background-color: $catalog-color-blue;
-            }
-            &:nth-of-type(3) {
-                background-color: $catalog-color-yellow;
-            }
-        }
-    }
 
     // * MEDIA
 
@@ -93,14 +77,6 @@
             svg {
                 height: 15px;
                 width: 15px;
-            }
-        }
-        &__size {
-            &-btn {
-                color: rgba($color: $dark-color, $alpha: 0.5);
-                &:not(:last-of-type) {
-                    margin-right: 5px;
-                }
             }
         }
     }

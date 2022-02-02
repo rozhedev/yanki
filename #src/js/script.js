@@ -4,6 +4,7 @@ const validation = require('./modules/validation.js');
 const select = require('./components/select.js');
 const burger = require('./components/burger.js');
 const spoilers = require('./components/spoilers.js');
+const productCard = require('./components/product-card.js');
 
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',

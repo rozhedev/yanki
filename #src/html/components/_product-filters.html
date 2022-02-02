@@ -14,45 +14,6 @@
         </svg>
     </div>
     <div class="product-filters__content">
-        <form action="" method="get">
-            <select name="@@size.id" id="@@size.id" class="@@size.id">
-                <option value="" selected>@@size.title</option>
-                <option value="@@size.values.value1">@@size.labels.label1</option>
-                <option value="@@size.values.value2">@@size.labels.label2</option>
-                <option value="@@size.values.value3">@@size.labels.label3</option>
-                <option value="@@size.values.value4">@@size.labels.label4</option>
-                <option value="@@size.values.value5">@@size.labels.label5</option>
-            </select>
-        </form>
-
-        <form action="" method="get">
-            <select name="@@color.id" id="@@color.id" class="@@color.id">
-                <option value="" selected>@@color.title</option>
-                <option value="@@color.values.value1">@@color.labels.label1</option>
-                <option value="@@color.values.value2">@@color.labels.label2</option>
-                <option value="@@color.values.value3">@@color.labels.label3</option>
-                <option value="@@color.values.value4">@@color.labels.label4</option>
-                <option value="@@color.values.value5">@@color.labels.label5</option>
-            </select>
-        </form>
-
-        <form action="" method="get">
-            <select name="@@price.id" id="@@price.id" class="@@price.id">
-                <option value="" selected>@@color.title</option>
-                <option value="@@price.values.value1">@@price.labels.label1</option>
-                <option value="@@price.values.value2">@@price.labels.label2</option>
-                <option value="@@price.values.value3">@@price.labels.label3</option>
-                <option value="@@price.values.value4">@@price.labels.label4</option>
-            </select>
-        </form>
-
-        <form action="" method="get">
-            <select name="@@sort-params.id" id="@@sort-params.id" class="@@sort-params.id">
-                <option value="" selected>@@sort-params.title</option>
-                <option value="@@sort-params.values.value1">@@sort-params.labels.label1</option>
-                <option value="@@sort-params.values.value2">@@sort-params.labels.label2</option>
-                <option value="@@sort-params.values.value3">@@sort-params.labels.label3</option>
-            </select>
-        </form>
+        @@loop("../items/_product-filters-item.html", "../json/product-filters.json")
     </div>
 </div>
