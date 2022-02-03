@@ -35,21 +35,53 @@ const categorySwiper = new Swiper(".categories-swiper", {
 });
 
 const productThumb = new Swiper(".product-thumb", {
-    direction: "vertical",
-    slidesPerView: 5,
-    spaceBetween: 10,
     watchSlidesProgress: true,
+    slidesPerView: 5,
 
+    breakpoints: {
+        320.98: {
+            direction: "horizontal",
+            spaceBetween: 5,
+        },
+        767.98: {
+            direction: "horizontal",
+            spaceBetween: 5,
+        },
+        1023.98: {
+            direction: "vertical",
+            spaceBetween: 10,
+        },
+        1139.98: {
+            direction: "vertical",
+            spaceBetween: 10,
+        },
+    },
 });
 
 const productSwiper = new Swiper(".product-swiper", {
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 10,
     watchSlidesProgress: true,
+    slidesPerView: 1,
 
     thumbs: {
         swiper: productThumb,
-    }
-});
+    },
+    breakpoints: {
+        320.98: {
+            direction: "horizontal",
+            spaceBetween: 5,
+        },
+        767.98: {
+            direction: "horizontal",
+            spaceBetween: 5,
+        },
+        1023.98: {
+            direction: "vertical",
+            spaceBetween: 10,
 
+        },
+        1139.98: {
+            direction: "vertical",
+            spaceBetween: 10,
+        },
+    },
+});

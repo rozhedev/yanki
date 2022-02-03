@@ -1,5 +1,4 @@
 .breadcrumbs {
-
     &__item {
         display: inline-block;
 
@@ -24,5 +23,8 @@
         &:hover {
             color: $light-color;
         }
+    }
+    @include media375 {
+        max-width: 355px;
     }
 }

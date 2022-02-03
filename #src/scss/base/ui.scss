@@ -46,6 +46,11 @@
     font-size: 20px;
     line-height: 23px;
     color: $dark-color;
+
+    @include media768 {
+        font-size: 18px;
+        line-height: 21px;
+    }
 }
 
 .h4 {

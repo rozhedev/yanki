@@ -5,7 +5,7 @@
     },
     {
         "label": "Каталог",
-        "href": "catalog.html"
+        "href": "../catalog.html"
     },
     {
         "label": "Пальто",
