@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('_head.html',{
+@@include("_head.html",{
 "title":"Каталог"
 })
 
@@ -14,30 +14,31 @@
         <main class="main page">
             <section class="catalog">
                 <!-- * HEADER -->
-                @@include('components/_header.html',{})
+                @@include("components/_header.html",{})
 
                 <div class="catalog__inner _container section-page">
-                    @@include('components/_breadcrumbs.html',{
-                    "item1":"Главная",
-                    "item2":"Каталог"
-                    })
+                    <nav>
+                        <ul class="breadcrumbs">
+                            @@loop("items/_breadcrumbs-item.html", "../json/breadcrumbs/catalog-crumbs.json")
+                        </ul>
+                    </nav>
 
                     <div class="catalog__wrapper page-content">
 
                         <!-- * SIDEBAR -->
 
-                        @@include('components/_category-sidebar.html', {})
+                        @@include("components/_category-sidebar.html", {})
 
                         <div class="catalog-product">
 
                             <!-- * FILTERS -->
 
-                            @@include('components/_product-filters.html', {})
+                            @@include("components/_product-filters.html", {})
 
                             <!-- * PRODUCTS CARD -->
 
                             <div class="catalog-product__content">
-                                @@loop('components/_product-card.html', '../json/product-cards.json')
+                                @@loop("components/_product-card.html", "../json/products/product-cards.json")
                             </div>
                         </div>
                     </div>
@@ -45,13 +46,13 @@
         </main>
 
         <!-- * FOOTER -->
-        @@include('components/_footer.html',{})
+        @@include("components/_footer.html",{})
     </div>
 
     <!-- * POPUP -->
-    <!-- @@include('_popup.html',{}) -->
+    <!-- @@include("_popup.html",{}) -->
     <!-- * JS -->
-    @@include('_js.html',{})
+    @@include("_js.html",{})
 </body>
 
 </html>

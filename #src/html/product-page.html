@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('_head.html',{
+@@include("_head.html",{
 "title":"Страница продукта"
 })
 
@@ -14,36 +14,133 @@
         <main class="main page">
             <section class="product-page">
                 <!-- * HEADER -->
-                @@include('components/_header.html',{})
+                @@include("components/_header.html",{})
 
                 <div class="product-page__inner _container section-page">
-                    @@include('components/_breadcrumbs.html',{
-                    "item1":"Главная",
-                    "item2":"Страница продукта"
-                    })
+                    <nav>
+                        <ul class="breadcrumbs">
+                            @@loop("items/_breadcrumbs-item.html", "../json/breadcrumbs/product-crumbs.json")
+                        </ul>
+                    </nav>
 
                     <div class="product-page__container page-content">
-                        <div class="product-page__slider"></div>
+                        <!-- * SLIDER -->
+                        <div class="product-page__slider">
+                            <div class="product-swiper swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product1.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product2.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product3.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product4.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product5.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product6.jpg" alt="product-image">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product1.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product2.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product3.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product4.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product5.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product6.jpg" alt="product-image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-thumb swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product1.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product2.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product3.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product4.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product5.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product6.jpg" alt="product-image">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product1.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product2.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product3.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product4.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product5.jpg" alt="product-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/photos/product-card/product6.jpg" alt="product-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="product-page__content">
                             <div class="product-page__info">
-                                <div class="product-page__title">Кремовое пальто</div>
-                                <div class="product-page__price">3150 грн</div>
-                                <div class="product-colors"></div>
+                                <div class="product-page__title h3">Кремовое пальто</div>
+                                <div class="product-page__price price">3150 грн</div>
+                                <div class="product-page__colors">
+                                    @@include("components/_product-colors.html", {})
+                                    <div class="product-page__colors-descr">Цвет: <span>Кофе с молоком меланж</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="product-page__actions">
-                                <!-- <form action="" method="get">
-                                    <select name="@@id" id="@@id" class="@@id">
-                                        <option value="" selected>@@size.title</option>
-                                        <option value="@@value1">@@label1</option>
-                                        <option value="@@value2">@@label2</option>
-                                        <option value="@@value3">@@label3</option>
-                                        <option value="@@value4">@@label4</option>
-                                        <option value="@@value5">@@label5</option>
-                                    </select>
-                                </form> -->
-                                <button class="product-page__btn btn" id="goToCart">В КОРЗИНУ</button>
-                                <button class="product-page__btn" id="goToFavorites">
+                                <div class="product-page__size">
+                                    @@include("items/_select-item.html", {
+                                    "id": "select-size-page",
+                                    "title": "Выберите размер",
+                                    "value1": "XXS",
+                                    "value2": "XS",
+                                    "value3": "S",
+                                    "value4": "M",
+                                    "value5": "L",
+                                    "label1": "XXS",
+                                    "label2": "XS",
+                                    "label3": "S",
+                                    "label4": "M",
+                                    "label5": "L"
+                                    })
+                                </div>
+                                <button class="product-page__btn-cart btn" id="goToCart">В КОРЗИНУ</button>
+                                <button class="product-page__btn-favor btn" id="goToFavorites">
                                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -55,17 +152,10 @@
                             </div>
                             <div class="product-page__details">
                                 <div class="product-page__title">Подробности</div>
-                                <div class="product-page__spoiler">
-                                    <div class="product-filters__btn">
-                                        <div class="product-filters__btn-content">
-                                            <span>Фильтры</span>
-                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M8.75 8.75V12.5L6.25 13.75V8.75L2.5 3.125V1.875H12.5V3.125L8.75 8.75ZM4.0025 3.125L7.5 8.37125L10.9975 3.125H4.0025Z"
-                                                    fill="#CCA88A" />
-                                            </svg>
-                                        </div>
+
+                                <div class="product-spoiler">
+                                    <div class="product-spoiler__trigger text">
+                                        <span>Обмеры и описание</span>
                                         <svg class="chevron-bottom" width="18" height="18" viewBox="0 0 18 18"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -73,34 +163,82 @@
                                                 fill="white" />
                                         </svg>
                                     </div>
+                                    <div class="spoiler__content">
+                                        <div class="spoiler__body">
+                                            <p class="spoiler__descr">Состав: 50% Шерсть, 50% Полиэстер</p>
+                                            <p class="spoiler__descr">Подкладка: 100% Полиэстер</p>
+                                            <p class="spoiler__descr">Утеплитель: 90% Пух, 10% Перо</p>
+                                            <ul class="spoiler__list">
+                                                <li>Не стирать</li>
+                                                <li>Гладить при температуре утюга до 110°C</li>
+                                                <li>Не отбеливать</li>
+                                                <li>Сухая чистка (химчистка)</li>
+                                                <li>Барабанная сушка запрещена</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    <div class="product-filters__content">
-                                        <p class="product-filters__descr">Состав: 50% Шерсть, 50% Полиэстер</p>
-                                        <p class="product-filters__descr">Подкладка: 100% Полиэстер</p>
-                                        <p class="product-filters__descr">Утеплитель: 90% Пух, 10% Перо</p>
-                                        <ol class="product-filters__list">
-                                            <li>Не стирать</li>
-                                            <li>Гладить при температуре утюга до 110°C</li>
-                                            <li>Не отбеливать</li>
-                                            <li>Сухая чистка (химчистка)</li>
-                                            <li>Барабанная сушка запрещена</li>
-                                        </ol>
+                                <div class="product-spoiler">
+                                    <div class="product-spoiler__trigger text">
+                                        <span>Состав и уход</span>
+                                        <svg class="chevron-bottom" width="18" height="18" viewBox="0 0 18 18"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9 9.88903L12.8891 5.99997L14 7.11091L9 12.1109L4 7.1109L5.11094 5.99997L9 9.88903Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="spoiler__content">
+                                        <div class="spoiler__body">
+                                            <p class="spoiler__descr">Состав: 50% Шерсть, 50% Полиэстер</p>
+                                            <p class="spoiler__descr">Подкладка: 100% Полиэстер</p>
+                                            <p class="spoiler__descr">Утеплитель: 90% Пух, 10% Перо</p>
+                                            <ul class="spoiler__list">
+                                                <li>Не стирать</li>
+                                                <li>Гладить при температуре утюга до 110°C</li>
+                                                <li>Не отбеливать</li>
+                                                <li>Сухая чистка (химчистка)</li>
+                                                <li>Барабанная сушка запрещена</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section id="products-set" class="offers-sect _container section-page">
+                <h3 class="h3">Дополните образ</h3>
+                <div class="offers-sect__content">
+                    @@loop("components/_product-card.html", "../json/products/product-set.json")
+                </div>
+            </section>
+
+            <section id="products-additional" class="offers-sect _container section-page">
+                <h3 class="h3">Вам может понравиться</h3>
+                <div class="offers-sect__content">
+                    @@loop("components/_product-card.html", "../json/products/product-recomend.json")
+                </div>
+            </section>
+
+            <section id="products-recomend" class="offers-sect _container section-page">
+                <h3 class="h3">Вы недавно смотрели</h3>
+                <div class="offers-sect__content">
+                    @@loop("components/_product-card.html", "../json/products/product-recomend.json")
+                </div>
             </section>
         </main>
 
         <!-- * FOOTER -->
-        @@include('components/_footer.html',{})
+        @@include("components/_footer.html",{})
     </div>
 
     <!-- * POPUP -->
-    <!-- @@include('_popup.html',{}) -->
+    <!-- @@include("_popup.html",{}) -->
     <!-- * JS -->
-    @@include('_js.html',{})
+    @@include("_js.html",{})
 </body>
 
 </html>

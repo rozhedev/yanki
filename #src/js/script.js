@@ -1,18 +1,18 @@
 // * COMMON CONST
 
-const validation = require('./modules/validation.js');
-const select = require('./components/select.js');
-const burger = require('./components/burger.js');
-const spoilers = require('./components/spoilers.js');
-const productCard = require('./components/product-card.js');
+const validation = require("./modules/validation.js");
+const select = require("./components/select.js");
+const burger = require("./components/burger.js");
+const spoilers = require("./components/spoilers.js");
+const productCard = require("./components/product-card.js");
 
-const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
+const categorySwiper = new Swiper(".categories-swiper", {
+    direction: "horizontal",
     loop: false,
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     breakpoints: {
         320.98: {
@@ -34,4 +34,22 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-// * Call validation function
+const productThumb = new Swiper(".product-thumb", {
+    direction: "vertical",
+    slidesPerView: 5,
+    spaceBetween: 10,
+    watchSlidesProgress: true,
+
+});
+
+const productSwiper = new Swiper(".product-swiper", {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 10,
+    watchSlidesProgress: true,
+
+    thumbs: {
+        swiper: productThumb,
+    }
+});
+

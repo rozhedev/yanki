@@ -17,10 +17,11 @@
                 @@include('components/_header.html',{})
 
                 <div class="refund__inner _container section-page">
-                    @@include('components/_breadcrumbs.html',{
-                    "item1":"Главная",
-                    "item2":"Обмен и возврат"
-                    })
+                    <nav>
+                        <ul class="breadcrumbs">
+                            @@loop("items/_breadcrumbs-item.html", "../json/breadcrumbs/refund-crumbs.json")
+                        </ul>
+                    </nav>
 
                     <div class="page-content">
                         <h2 class="refund__title h3">Обмен и возврат</h2>

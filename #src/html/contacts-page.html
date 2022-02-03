@@ -17,10 +17,11 @@
                 @@include('components/_header.html',{})
 
                 <div class="contacts-page__inner _container section-page">
-                    @@include('components/_breadcrumbs.html',{
-                    "item1":"Главная",
-                    "item2":"Контакты"
-                    })
+                    <nav>
+                        <ul class="breadcrumbs">
+                            @@loop("items/_breadcrumbs-item.html", "../json/breadcrumbs/contacts-crumbs.json")
+                        </ul>
+                    </nav>
 
                     <div class="page-content">
                         <h2 class="contacts-page__title h3">Связаться с нами</h2>

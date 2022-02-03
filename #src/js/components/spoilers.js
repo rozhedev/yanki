@@ -1,5 +1,7 @@
-const spoilerTriggers = document.querySelectorAll(".spoiler__trigger");
 const spoilerItems = document.querySelectorAll(".spoiler");
+const spoilerTriggers = document.querySelectorAll(".spoiler__trigger");
+const prodSpoilerItems = document.querySelectorAll(".product-spoiler");
+const prodSpoilerTriggers = document.querySelectorAll(".product-spoiler__trigger");
 
 const lgContainer = 980;
 
@@ -17,10 +19,20 @@ function openAccordion(activeItem, items) {
     }
 }
 
-if (spoilerItems && document.documentElement.clientWidth < lgContainer) {
+if (spoilerItems) {
     spoilerTriggers.forEach((item) => {
+        item.addEventListener("click", () => {       
+            if (document.documentElement.clientWidth < lgContainer) {
+                openAccordion(item, spoilerItems);
+            }
+        });
+    });
+}
+
+if (prodSpoilerItems) {
+    prodSpoilerTriggers.forEach((item) => {
         item.addEventListener("click", () => {
-            openAccordion(item, spoilerItems);
+            openAccordion(item, prodSpoilerItems);
         });
     });
 }

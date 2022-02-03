@@ -44,11 +44,6 @@
             color: $primary-accent-color;
         }
     }
-    &__price {
-        margin: 5px 0;
-        font-variant-numeric: lining-nums;
-        font-weight: 700;
-    }
     &__size {
         &-btn {
             color: rgba($color: $dark-color, $alpha: 0.5);

@@ -1,0 +1,30 @@
+[
+    {
+        "id": "select-lang",
+        "title": "RU",
+        "value1": "UA",
+        "value2": "ENG",
+        "value3": "",
+        "value4": "",
+        "value5": "",
+        "label1": "RU",
+        "label2": "UA",
+        "label3": "ENG",
+        "label4": "",
+        "label5": ""
+    },
+    {
+        "id": "select-currency",
+        "title": "UAH",
+        "value1": "RUB",
+        "value2": "EUR",
+        "value3": "",
+        "value4": "",
+        "value5": "",
+        "label1": "UAH",
+        "label2": "RUB",
+        "label3": "EUR",
+        "label4": "",
+        "label5": ""
+    }
+]

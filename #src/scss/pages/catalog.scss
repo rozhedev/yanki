@@ -25,7 +25,7 @@
             flex-direction: column;
         }
         .catalog-product__content {
-            grid-template: repeat(10, 1fr) / repeat(2, 1fr);
+            grid-template: repeat(5, 1fr) / repeat(2, 1fr);
             
             margin-top: 15px;
         }

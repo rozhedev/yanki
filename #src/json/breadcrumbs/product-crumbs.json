@@ -1,0 +1,18 @@
+[
+    {
+        "label": "Главная",
+        "href": "index.html"
+    },
+    {
+        "label": "Каталог",
+        "href": "catalog.html"
+    },
+    {
+        "label": "Пальто",
+        "href": ""
+    },
+    {
+        "label": "Кремовое пальто",
+        "href": ""
+    }
+]

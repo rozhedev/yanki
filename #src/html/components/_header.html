@@ -19,21 +19,8 @@
 
                 <!-- * SELECT -->
 
-                <div class="header-select">
-                    <form action="" method="get">
-                        <select name="select-lang" id="select-lang" class="select-lang">
-                            <option value="RU" selected>RU</option>
-                            <option value="UA">UA</option>
-                            <option value="EN">EN</option>
-                        </select>
-                    </form>
-                    <form action="" method="get">
-                        <select name="select-currency" id="select-currency" class="select-currency">
-                            <option value="UAH" selected>UAH</option>
-                            <option value="RUB">RUB</option>
-                            <option value="USD">USD</option>
-                        </select>
-                    </form>
+                <div class="header__select">
+                    @@loop("../items/_select-item.html", "../json/header-select.json")
                 </div>
                 <div class="header__buttons">
                     <button class="header__buttons-item search-btn">
@@ -153,20 +140,7 @@
                 </div>
             </div>
             <div class="header__select header__select--mobile">
-                <form action="" method="get">
-                    <select name="select-lang" id="select-lang" class="select-lang">
-                        <option value="RU" selected>RU</option>
-                        <option value="UA">UA</option>
-                        <option value="EN">EN</option>
-                    </select>
-                </form>
-                <form action="" method="get">
-                    <select name="select-currency" id="select-currency" class="select-currency">
-                        <option value="UAH" selected>UAH</option>
-                        <option value="RUB">RUB</option>
-                        <option value="USD">USD</option>
-                    </select>
-                </form>
+                @@loop("../items/_select-item.html", "../json/header-select.json")
             </div>
         </div>
 
