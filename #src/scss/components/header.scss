@@ -203,6 +203,15 @@
                         background-color: $primary-accent-color;
                     }
                 }
+                @include media768 {
+                    &:hover {
+                        & span,
+                        &::before,
+                        &::after {
+                            background-color: $light-color;
+                        }
+                    }
+                }
             }
             &__menu-link {
                 color: $light-color;
@@ -372,19 +381,19 @@
                 position: absolute;
                 top: 64px;
                 left: -100%;
-                z-index: 5;
                 width: 100%;
                 height: calc(100% - 64px);
                 padding: 20px 20px 30px 20px;
                 background-color: $light-color;
-                overflow: auto !important;
+                overflow: auto;
                 transition: $fastTransition;
 
                 &._active {
                     opacity: 1;
                     pointer-events: auto;
                     left: 0%;
-                    overflow: auto !important;
+                    z-index: 6;
+                    overflow: auto;
                 }
             }
             &-settings {
@@ -446,6 +455,9 @@
         }
         &__mobile {
             // * ^undefined class^
+            &-body {
+                margin: 50px 0 60px;
+            }
             &-settings {
                 justify-content: space-between;
             }

@@ -21,8 +21,10 @@
 	}
 	@media (max-width: $little-tablet + px) {
 		max-width: $md + px;
+        padding: 0 10px;
 	}
 	@media (max-width: $phone + px) {
 		max-width: $sm + px;
+        padding: 0 10px;
 	}
 }

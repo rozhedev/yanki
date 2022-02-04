@@ -1,7 +1,4 @@
 .contacts-page {
-    .section-page {
-        padding: 30px 0 0 0;
-    }
     &__content {
         margin-top: 30px;
         display: flex;
@@ -50,7 +47,7 @@
         &__item {
             width: 160px;
 
-            &:nth-of-type(n + 2) {
+            &:nth-of-type(n + 3) {
                 margin-top: 15px;
             }
             &-descr {

@@ -2,6 +2,7 @@
     width: 310px;
     height: 460px;
     position: relative;
+
     &__img {
         width: 310px;
         height: 360px;
@@ -59,11 +60,11 @@
 
     @include media1024 {
         width: 185px;
-        height: 326px;
+        height: 340px;
 
         &__img {
             width: 185px;
-            height: 216px;
+            height: 240px;
         }
         &__like {
             width: 35px;
@@ -82,11 +83,11 @@
         }
     }
     @include media375 {
-        width: 172px;
-        height: 320px;
+        width: 165px;
+        height: 330px;
 
         &__img {
-            width: 172px;
+            width: 165px;
             height: 230px;
         }
         &__content {
