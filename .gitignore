@@ -1,12 +1,3 @@
 node_modules
-z_dist
-\#src/fonts
-\#src/img
-config
-tasks
-package-lock.json
-package.json
-gulpfile.js
-docs
 debug.log
 .vscode

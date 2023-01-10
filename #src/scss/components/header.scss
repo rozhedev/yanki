@@ -127,8 +127,11 @@
                     background: url("../../img/icons/chevron-bottom-dark.svg") center / 100% no-repeat;
                 }
             }
-            .select__options {
+            &__options {
                 background: none;
+                @include media768 {
+                    background-color: $light-color;
+                }
             }
             &__option {
                 color: $dark-color;

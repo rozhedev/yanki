@@ -1,83 +1,112 @@
-Улутшенный шаблон CodeQuest https://youtu.be/qSZvGlIKGPg. Все что касается изм. этой сборки описано здесь
+# Yanki
 
-Пользуюсь VS Code https://code.visualstudio.com при установке лучше проставить все галки для удобства работы.
-Показывать буду исп. его.
+Consist of seven pages:
 
-Как запустить сборку?
 
-1. Устанавливаем NodeJS https://nodejs.org/uk . Нам нужна LTS версия (кнопка слева). Все параметры ост. как есть.
+All pages have 3 adaptive versions.
 
-2. Устанавлмваем Git https://git-scm.com/ . Все параметры ост. как есть.
+## Features
 
-3. Заходим в PowerShell от имени администратора и вводим команду: Set-ExecutionPolicy RemoteSigned после этого высветится
-подтверждение, нажимаем Y. Этот шаг нужен чтобы разрешить выполнение локальных скриптов в Powershell.
+* Currency rate widget
 
-3. Открываем проект в редакторе. После этого нажимаем Ctrl + ~ чтобы открыть терминал.
 
-4. Пишем команду npm i gulp -D . После этого вводим npm i | Вопреки большему к-ству ошибок сборка работает нормально.
-(большое к-ство ошибок - неотъемлимый атрибут любого open source :) ).
+## Demo
 
-5. Пишем gulp для запуска сборки в режиме разработки. 
-Если работа над проектом закончена пишем gulp --production для минификации кода и изображений.
-________________________________________________________________________
+**Main page**
 
-В случае проблем
+![main-page](blob/main-demo.png)
 
-npm rebuild - если после команды npm i установились не все пакеты.
-npm cache verify - если после сборка после перезапуска не ловит изменений на лету.
-Настрой запуск VS Code от имени администратора: 
-https://qastack.ru/programming/37700536/visual-studio-code-terminal-how-to-run-a-command-with-administrator-rights
-________________________________________________________________________
+## Usage
 
-Предназначение папок:
+I use an improved Gulp-based build taken from this video: [Click](https://youtu.be/qSZvGlIKGPg)
 
-#src - папка с исхдниками.
+First of all, open project in [VS Code](https://code.visualstudio.com). After that, open terminal.
 
-z_dist - папка с готовым проектом, на хостинг нужно отправлять её.
-_____________________
+If you do not have Gulp installed, write the commands:
 
-Эти папки / файлы лучше не трогать!
+```bash
+  npm i gulp -D
 
-config - конфиг. сборки. У файле path - все пути ко всем видам файлов. У файле app.js - настройки плагинов.
-tasks - все задачи сборки по обработке файлов.
-node_modules - папка в которой хранятся все файлы плагинов и их зависимостей.
-package-lock.json - файл с опис. всех зависимостей сборки.
-package.json - файл с опис. всех уст. плагинов.
-_____________________
-.gitignore - добавляй сюда пути к папкам или файлам, если хочешь чтобы Git их игнорировал.
-gulpfile.js - главный файл сборки где билдятся все задачи и конфиг.
+  npm i gulp-cli -D
+```
 
-* Для удобного просмотра истории версий советую скачать Git History Diff. У верхнем правом углу появится его иконка.
+After that, install dependencies:
 
-________________________________________________________________________
-Структура папки #src:
+```bash
+  npm i
+```
 
-|fonts
+For start the project in development mode:
 
-|html
-|-components - разметка компонентов
-|-items - повт. комп. в других компоненах (эл. списков, ссылки, select и тд)
+```bash
+  gulp
+```
 
-|img
-|-favicon
-|-icons
-|-logo
-|-photos
+If the project is finished, minify the code and images, use command:
 
-|js
-|-components - скрипты компонентов
-|-modules - модули для использования в нескольких компонентах
+```bash
+  gulp --production
+```
 
-|json
-* Название папок зависит от инф. хранящийся в JSON
+### Troubleshooting
 
-|scss
-|-base - базовые файлы стилей (переменные, обнуление, сетка, ui, миксины, шрифты)
-|-components - стили компонентов
-|-home - стили главной
-|-pages - стили страниц
-* У файле style.scss хранить только импорты других файлов!
+1. Set VS Code to run as an administrator [Click](https://qastack.ru/programming/37700536/visual-studio-code-terminal-how-to-run-a-command-with-administrator-rights) 
+2. **Node JS v16** and **Gulp v4** is required to work correctly (NodeJS v16.16 and Gulp v4.0.2 is based version).
+3. **npm rebuild** - if not all packages are installed after **npm i** command.
+4. **npm cache verify** - If after restarting, build doesn't catch changes "on the fly".
 
-** Запущений на сборке сайт можно посмотреть глобально. Для этого нужно перейти в gulpfile.js, найти настройку Browser Sync и у
-свойстве tunnel ввести предпочетаемый домен. Лучше вводить что-то уникальное (не test123). Домен будет иметь приставку loca.lt.
-В качестве хостинга исп. ПК. Виключил сборку - сайт недоступен.
+### Folder structure
+
+**#src** - source folder.
+
+**z_dist** - project bundle.
+
+```
+project
+│   readme.md
+│   package.json 
+|   package-lock.json
+|   gulpfile.js
+|   .gitignore
+|   .eslintrc.json
+│
+└───blob                          # Demo images
+|
+└───#src
+│   └───fonts                     # Fonts in .ttf, .otf format
+│   │
+│   └───html                      # All .html files
+│   |   └───components            # Components layout (e.g. _news-card.html)
+│   └───img                       # All images
+|   |   └───...    
+│   └───js                        # All .js files
+│   |   └───calc                  # Business logic
+│   |   └───common                # Reusable function and common functionality
+│   |   └───components            # Components logic
+│   |   └───data                  # For saving reusable data objects
+|   |       script.js             # For import files
+|   |
+|   └───json                      # All .json files
+|   |   └───...
+|   └───scss                      # All .scss files
+|       └───base                  # Basic stylisation files (vars, null, fonts etc.)
+|       └───components            # Components styles
+|       └───pages                 # Pages styles
+|       |   style.scss            # For import all styles
+│   
+└───z_dist                        # Project bundle
+|   └───css
+|   └───fonts
+|   └───img
+|   └───js
+|   *.html
+|
+└───config                        # Config build files (path & plugin settings)
+|
+└───docs (optional)               # Informational files
+|
+└───tasks                         # Tasks for processing different file types
+|
+└───node_modules
+    └───...
+```
