@@ -39,18 +39,16 @@ function setSuccessFor(input) {
 
 // * Call functions
 
-if (subscribeForm) {
+if (subscribeEmail) {
     subscribeEmail.addEventListener("input", function (e) {
         e.preventDefault();
-        e = e.target;
-        
-        if (subscribeEmail && e == subscribeEmail) {
-            setTimeout(function () {
-                checkEmail(subscribeEmail);
-            }, COMMON_VAL.eventInterval);
-        }
+        setTimeout(() => {
+            checkEmail(subscribeEmail);
+        }, COMMON_VAL.eventInterval);
     });
+}
 
+if (subscribeForm) {
     subscribeForm.addEventListener("submit", function (e) {
         e.preventDefault();
         checkEmail(subscribeEmail);

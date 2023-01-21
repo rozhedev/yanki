@@ -1,30 +1,25 @@
-"use strict";
-
-// * Меню бургер
+import { STATE_LIST, COMMON_VAL } from "../data/values";
 
 const iconMenu = document.querySelector(".header__menu-icon");
 const iconClose = document.querySelector(".header__hidden-icon");
 const menuBody = document.querySelector(".header__hidden-menu");
 
-const lgContainer = 980;
-const smContainer = 720;
-
-if (iconMenu && document.documentElement.clientWidth > lgContainer) {
+if (iconMenu && iconClose && document.documentElement.clientWidth > COMMON_VAL.lgCont) {
     iconMenu.addEventListener("click", function (e) {
-        menuBody.classList.add("_active");
+        menuBody.classList.add(STATE_LIST.active);
     });
     iconClose.addEventListener("click", function (e) {
-        menuBody.classList.remove("_active");
+        menuBody.classList.remove(STATE_LIST.active);
     });
 }
 
 const mobileMenu = document.querySelector(".header__mobile-menu")
 
-if (iconMenu && document.documentElement.clientWidth <= lgContainer) {
+if (iconMenu && mobileMenu && document.documentElement.clientWidth <= COMMON_VAL.lgCont) {
     iconMenu.addEventListener("click", function (e) {
-        document.body.classList.toggle("_lock");
-        iconMenu.classList.toggle("_active");
-        mobileMenu.classList.toggle("_active");
+        document.body.classList.toggle(STATE_LIST.lock);
+        this.classList.toggle(STATE_LIST.active);
+        mobileMenu.classList.toggle(STATE_LIST.active);
     });
 }
 
@@ -46,9 +41,9 @@ if (homeSect) {
 const categorySidebar = document.querySelector(".category-sidebar");
 const categorySidebarBtn = document.querySelector(".category-sidebar__btn");
 
-if (categorySidebar && document.documentElement.clientWidth < smContainer) {
+if (categorySidebar && document.documentElement.clientWidth < COMMON_VAL.smCont) {
     categorySidebarBtn.addEventListener("click", () => {
-        categorySidebar.classList.toggle('_active');
+        categorySidebar.classList.toggle(STATE_LIST.active);
     });
 }
 
@@ -57,8 +52,8 @@ if (categorySidebar && document.documentElement.clientWidth < smContainer) {
 const productFilters = document.querySelector(".product-filters");
 const productFiltersBtn = document.querySelector(".product-filters__btn");
 
-if (productFilters && document.documentElement.clientWidth < smContainer) {
+if (productFilters && document.documentElement.clientWidth < COMMON_VAL.smCont) {
     productFiltersBtn.addEventListener("click", () => {
-        productFilters.classList.toggle('_active');
+        productFilters.classList.toggle(STATE_LIST.active);
     });
 }

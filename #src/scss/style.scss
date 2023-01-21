@@ -19,7 +19,7 @@
 @import "base/ui.scss";
 
 // * LIBS
-// @import 'libs/swiper.scss';
+@import 'libs/swiper.scss';
 
 // * COMPONENTS
 @import "components/select.scss";
@@ -29,18 +29,14 @@
 @import "components/subscribe.scss";
 @import "components/spoiler.scss";
 @import "components/breadcrumbs.scss";
-@import "components/unordered-list.scss";
 @import "components/category-sidebar.scss";
 @import "components/product-filters.scss";
 @import "components/product-colors.scss";
 @import "components/product-card.scss";
 @import "components/footer.scss";
 
-// * HOME SECTIONS
-@import "home/main.scss";
-@import "home/categories-sect.scss";
-
 // * PAGES
+@import "pages/main.scss";
 @import "pages/delivery.scss";
 @import "pages/refund.scss";
 @import "pages/contacts-page.scss";

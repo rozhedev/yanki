@@ -1,29 +1,18 @@
-// Для хорошего отобр. шрифтов, подгружаемых с Google Fonts добавляй это в конец ссылки
+// For good display of fonts downloaded from Google Fonts, add params to end of the link:
 // &display=swap&subset=cyrillic-ext
 
-@font-face {
-    font-family: "Raleway";
-    font-display: swap;
-    src: url("../../fonts/Raleway-ExtraLight.woff") format("woff"),
-        url("../../fonts/Raleway-ExtraLight.woff2") format("woff2");
-    font-weight: 200;
-    font-style: normal;
+// * Font include
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+			url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
 }
 
-@font-face {
-    font-family: "Raleway";
-    font-display: swap;
-    src: url("../../fonts/Raleway-Light.woff") format("woff"),
-        url("../../fonts/Raleway-Light.woff2") format("woff2");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Raleway";
-    font-display: swap;
-    src: url("../../fonts/Raleway-Bold.woff") format("woff"),
-        url("../../fonts/Raleway-Bold.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-}
+@include font("Raleway", "Raleway-ExtraLight", "200", "normal");
+@include font("Raleway", "Raleway-Light", "300", "normal");
+@include font("Raleway", "Raleway-Bold", "700", "normal");

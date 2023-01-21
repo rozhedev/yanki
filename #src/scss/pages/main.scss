@@ -42,3 +42,36 @@
         background: url("../img/photos/bg/women-main1.jpg") left / 100% no-repeat;
     }
 }
+
+.categories-sect {
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__slide {
+        font-size: 20px;
+        &-content {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 8px 30px;
+            text-align: center;
+            background-color: rgba($color: $primary-accent-color, $alpha: 0.8);
+            color: $light-color;
+            backdrop-filter: blur(6px);
+        }
+    }
+    @include media768 {
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__slide {
+            font-size: 18px;
+            height: 230px;
+            img {
+                width: 165px;
+                height: 230px;
+            }
+        }
+    }
+}

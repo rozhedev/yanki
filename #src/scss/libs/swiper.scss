@@ -1,0 +1,30 @@
+@import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/swiper/swiper-vars.scss";
+@import "../../../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../../../node_modules/swiper/modules/thumbs/thumbs.scss";
+
+.categories-swiper {
+    width: 100%;
+    height: 450px;
+    
+    .swiper-button-next::after, .swiper-button-prev::after {
+        width: 40px;
+        height: 40px;
+        background-color: $primary-accent-color;
+        padding: 8px 13px;
+        color: $light-color;
+        font-size: 24px;
+    }
+    .swiper-button-next::after {
+        margin-right: 20px;
+    }
+    .swiper-button-prev::after {
+        margin-left: 20px;
+    }
+    .swiper-button-disabled {
+        display: none;
+    }
+    @include media768 {
+        height: 230px;
+    }
+}

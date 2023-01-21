@@ -1,4 +1,7 @@
+import Swiper, { Navigation, Thumbs} from 'swiper';
+
 const categorySwiper = new Swiper(".categories-swiper", {
+    modules: [Navigation, Thumbs],
     direction: "horizontal",
     loop: false,
 
@@ -27,6 +30,7 @@ const categorySwiper = new Swiper(".categories-swiper", {
 });
 
 const productThumb = new Swiper(".product-thumb", {
+    modules: [Navigation, Thumbs],
     watchSlidesProgress: true,
     slidesPerView: 5,
 
@@ -51,6 +55,7 @@ const productThumb = new Swiper(".product-thumb", {
 });
 
 const productSwiper = new Swiper(".product-swiper", {
+    modules: [Navigation, Thumbs],
     watchSlidesProgress: true,
     slidesPerView: 1,
 

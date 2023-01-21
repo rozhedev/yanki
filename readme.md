@@ -80,7 +80,6 @@ project
 │   └───img                       # All images
 |   |   └───...    
 │   └───js                        # All .js files
-│   |   └───calc                  # Business logic
 │   |   └───common                # Reusable function and common functionality
 │   |   └───components            # Components logic
 │   |   └───data                  # For saving reusable data objects

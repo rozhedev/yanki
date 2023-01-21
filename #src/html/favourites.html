@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html',{
+"title":"Избранное"
+})
+
+<body>
+    <div class="wrapper">
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+
+        <main class="main page">
+            <section class="delivery">
+                <!-- * HEADER -->
+                @@include('components/_header.html',{})
+
+                <div class="delivery__inner _container section-page">
+                    <nav>
+                        <ul class="breadcrumbs">
+                            @@loop("items/_breadcrumbs-item.html", "../json/breadcrumbs/delivery-crumbs.json")
+                        </ul>
+                    </nav>
+
+                    <div class="page-content">
+                        <h2 class="delivery__title h3">Избранное</h2>
+                        <div class="catalog-product__content">
+                            @@loop("components/_product-card.html", "../json/products/favourites-cards.json")
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- * FOOTER -->
+        @@include('components/_footer.html',{})
+    </div>
+
+    <!-- * JS -->
+    @@include('_js.html',{})
+</body>
+
+</html>

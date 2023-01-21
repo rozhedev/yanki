@@ -1,7 +1,10 @@
-import "./common/validation.js";
+"use strict";
 
-import "./components/select.js";
-import "./components/burger.js";
-import "./components/spoilers.js";
+import "./libs/swiper";
 
-import "./libs/swiper.js";
+import "./common/validation";
+
+import "./components/select";
+import "./components/search";
+import "./components/burger";
+import "./components/spoilers";
