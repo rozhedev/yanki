@@ -1,8 +1,9 @@
+import { CLASS_LIST } from '../data/classlist';
 import { STATE_LIST, TEXT_ERRORS, COMMON_VAL } from "../data/values";
 import { isEmail } from "../data/regex";
 
-const subscribeEmail = document.querySelector(".subscribe__form-inp");
 const subscribeForm = document.getElementById("subscribe-form");
+const subscribeEmail = document.querySelector(`.${CLASS_LIST.validation.subscribeMail}`);
 
 
 // * Email

@@ -1,9 +1,11 @@
-import { CLASS_LIST, STATE_LIST, COMMON_VAL } from '../data/values';
+import { CLASS_LIST } from '../data/classlist';
+import { STATE_LIST, COMMON_VAL } from '../data/values';
 
-const spoilerItems = document.querySelectorAll(".spoiler");
-const spoilerTriggers = document.querySelectorAll(".spoiler__trigger");
-const prodSpoilerItems = document.querySelectorAll(".product-spoiler");
-const prodSpoilerTriggers = document.querySelectorAll(".product-spoiler__trigger");
+const spoilerItems = document.querySelectorAll(`.${CLASS_LIST.spoiler.root}`);
+const spoilerTriggers = document.querySelectorAll(`.${CLASS_LIST.spoiler.trigger}`);
+const prodSpoilerItems = document.querySelectorAll(`.${CLASS_LIST.spoiler.product}`);
+const prodSpoilerTriggers = document.querySelectorAll(`.${CLASS_LIST.spoiler.productTrigger}`);
+
 
 function openAccordion(activeItem, items) {
     const parent = activeItem.parentNode;

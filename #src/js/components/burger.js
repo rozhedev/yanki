@@ -1,45 +1,58 @@
+import { CLASS_LIST } from "../data/classlist";
 import { STATE_LIST, COMMON_VAL } from "../data/values";
 
-const iconMenu = document.querySelector(".header__menu-icon");
-const iconClose = document.querySelector(".header__hidden-icon");
-const menuBody = document.querySelector(".header__hidden-menu");
+const menuIcon = document.querySelector(`.${CLASS_LIST.burger.menuIcon}`);
+const hiddenCloseIcon = document.querySelector(`.${CLASS_LIST.burger.hiddenMenuIcon}`);
+const hiddenMenuBody = document.querySelector(`.${CLASS_LIST.burger.hiddenMenuBody}`);
+const mobileMenu = document.querySelector(`.${CLASS_LIST.burger.mobileMenu}`);
 
-if (iconMenu && iconClose && document.documentElement.clientWidth > COMMON_VAL.lgCont) {
-    iconMenu.addEventListener("click", function (e) {
-        menuBody.classList.add(STATE_LIST.active);
+const homeSect = document.getElementById("home");
+const logoPath = "img/logo/home-logo.svg";
+
+const categorySidebar = document.querySelector(`.${CLASS_LIST.sidebar.category}`);
+const categorySidebarBtn = document.querySelector(`.${CLASS_LIST.sidebar.categoryBtn}`);
+const productFilters = document.querySelector(`.${CLASS_LIST.filters.product}`);
+const productFiltersBtn = document.querySelector(`.${CLASS_LIST.filters.productBtn}`);
+
+// * HIDDEN MENU
+
+if (
+    menuIcon &&
+    hiddenCloseIcon &&
+    document.documentElement.clientWidth > COMMON_VAL.lgCont
+) {
+    menuIcon.addEventListener("click", function (e) {
+        hiddenMenuBody.classList.add(STATE_LIST.active);
     });
-    iconClose.addEventListener("click", function (e) {
-        menuBody.classList.remove(STATE_LIST.active);
+    hiddenCloseIcon.addEventListener("click", function (e) {
+        hiddenMenuBody.classList.remove(STATE_LIST.active);
     });
 }
 
-const mobileMenu = document.querySelector(".header__mobile-menu")
+// * MOBILE MENU
 
-if (iconMenu && mobileMenu && document.documentElement.clientWidth <= COMMON_VAL.lgCont) {
-    iconMenu.addEventListener("click", function (e) {
+if (menuIcon &&
+    mobileMenu &&
+    document.documentElement.clientWidth <= COMMON_VAL.lgCont
+) {
+    menuIcon.addEventListener("click", function (e) {
         document.body.classList.toggle(STATE_LIST.lock);
         this.classList.toggle(STATE_LIST.active);
         mobileMenu.classList.toggle(STATE_LIST.active);
     });
 }
 
-
-// * Меняем шапку на других страницах
-
-const homeSect = document.getElementById("home");
+// * Change header on other pages
 
 if (homeSect) {
-    const header = document.querySelector("#home .header__inner");
-    const logoImg = document.querySelector(".header__body .logo img");
+    const header = document.querySelector(`#home .${CLASS_LIST.burger.headerInner}`);
+    const logoImg = document.querySelector(`.${CLASS_LIST.burger.logoImg}`);
 
-    header.classList.add("header__inner--light");
-    logoImg.setAttribute("src", "img/logo/home-logo.svg");
+    header.classList.add(`${CLASS_LIST.burger.headerInnerLight}`);
+    logoImg.setAttribute("src", logoPath);
 }
 
-// * Sidebar в каталоге
-
-const categorySidebar = document.querySelector(".category-sidebar");
-const categorySidebarBtn = document.querySelector(".category-sidebar__btn");
+// * SIDEBAR
 
 if (categorySidebar && document.documentElement.clientWidth < COMMON_VAL.smCont) {
     categorySidebarBtn.addEventListener("click", () => {
@@ -47,10 +60,7 @@ if (categorySidebar && document.documentElement.clientWidth < COMMON_VAL.smCont)
     });
 }
 
-// * Фильтры в каталоге
-
-const productFilters = document.querySelector(".product-filters");
-const productFiltersBtn = document.querySelector(".product-filters__btn");
+// * FILTERS
 
 if (productFilters && document.documentElement.clientWidth < COMMON_VAL.smCont) {
     productFiltersBtn.addEventListener("click", () => {

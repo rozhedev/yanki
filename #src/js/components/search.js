@@ -1,8 +1,9 @@
-import {STATE_LIST} from '../data/values';
+import { CLASS_LIST } from '../data/classlist';
+import { STATE_LIST } from '../data/values';
 
-const searchBtn = document.querySelector(".search-btn");
-const searchBody = document.querySelector(".search");
-const searchClose = document.querySelector(".search__close");
+const searchBody = document.querySelector(`.${CLASS_LIST.search.root}`);
+const searchBtn = document.querySelector(`.${CLASS_LIST.search.btn}`);
+const searchClose = document.querySelector(`.${CLASS_LIST.search.closeIcon}`);
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();

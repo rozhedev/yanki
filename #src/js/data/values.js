@@ -16,12 +16,3 @@ export const COMMON_VAL = {
     lgCont: 980,
     smCont: 720,
 }
-
-export const CLASS_LIST = {
-    burger: {
-        menuIcon: "header__menu-icon"
-    },
-    slider: {
-        category: ".categories-swiper",
-    },
-}
