@@ -1,20 +1,41 @@
 # Yanki
 
-Consist of seven pages:
+Template of the online clothing store.
 
+Consist of seven pages:
+* Main
+* Catalog
+* Product page
+* Favourites
+* Contacts
+* Delivery
+* Refund
 
 All pages have 3 adaptive versions.
-
-## Features
-
-* Currency rate widget
-
 
 ## Demo
 
 **Main page**
 
 ![main-page](blob/main-demo.png)
+
+![main-page](blob/main-demo2.png)
+
+**Catalog**
+
+![catalog-page](blob/catalog.png)
+
+**Product card**
+
+![product-card](blob/product-card.png)
+
+**Delivery**
+
+![delivery-page](blob/delivery.png)
+
+**Contacts**
+
+![delivery-page](blob/contacts.png)
 
 ## Usage
 
@@ -50,16 +71,19 @@ If the project is finished, minify the code and images, use command:
 
 ### Troubleshooting
 
-1. Set VS Code to run as an administrator [Click](https://qastack.ru/programming/37700536/visual-studio-code-terminal-how-to-run-a-command-with-administrator-rights) 
-2. **Node JS v16** and **Gulp v4** is required to work correctly (NodeJS v16.16 and Gulp v4.0.2 is based version).
-3. **npm rebuild** - if not all packages are installed after **npm i** command.
-4. **npm cache verify** - If after restarting, build doesn't catch changes "on the fly".
+1. Set VS Code to run as an administrator [Click](https://qastack.ru/programming/37700536/visual-studio-code-terminal-how-to-run-a-command-with-administrator-rights)
+2. Open PowerShell with administrator rights and type command: "Set-ExecutionPolicy RemoteSigned" after that displaying confirm dialog, press "Y". This step need for allow execute local scripts in PowerShell.
+3. **Node JS v16** and **Gulp v4** is required to work correctly (NodeJS v16.16 and Gulp v4.0.2 is based version).
+4. **npm rebuild** - if not all packages are installed after **npm i** command.
+5. **npm cache verify** - If after restarting, build doesn't catch changes "on the fly".
 
 ### Folder structure
 
 **#src** - source folder.
 
 **z_dist** - project bundle.
+
+In all files in #src folder, write path as like **from z_dist** folder.
 
 ```
 project
@@ -76,6 +100,8 @@ project
 │   └───fonts                     # Fonts in .ttf, .otf format
 │   │
 │   └───html                      # All .html files
+|   |   └───items                 # Component fragments (e.g. _breadcrumbs-item.html)
+|   |   └───chunks                # Common parts of all pages (e.g. _header.html)
 │   |   └───components            # Components layout (e.g. _news-card.html)
 │   └───img                       # All images
 |   |   └───...    
