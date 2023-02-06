@@ -124,7 +124,7 @@
             &__value {
                 color: $dark-color;
                 &::before {
-                    background: url("../../img/icons/chevron-bottom-dark.svg") center / 100% no-repeat;
+                    background: url($pathIconDark) center / 100% no-repeat;
                 }
             }
             &__options {
@@ -247,7 +247,7 @@
             &__value {
                 color: $light-color;
                 &::before {
-                    background: url("../../img/icons/chevron-bottom.svg") center / 100% no-repeat;
+                    background: url($pathIcon) center / 100% no-repeat;
                 }
             }
             &__option {
@@ -335,7 +335,7 @@
                     color: $dark-color;
                 }
                 .select__value::before {
-                    background: url("../../img/icons/chevron-bottom-dark.svg") center / 100% no-repeat;
+                    background: url($pathIconDark) center / 100% no-repeat;
                 }
             }
         }

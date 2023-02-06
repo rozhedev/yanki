@@ -1,6 +1,6 @@
 [
     {
-        "imgPath": "../../img/photos/product-card/product1.jpg",
+        "imgPath": "img/photos/product-card/product1.jpg",
         "titleClasses": "product-card__title product-card__title--new text",
         "title": "Кремовое пальто",
         "price": "3150 грн",
@@ -11,7 +11,7 @@
         "size5":"L"
     },
     {
-        "imgPath": "../../img/photos/categories/woman1.jpg",
+        "imgPath": "img/photos/categories/woman1.jpg",
         "titleClasses": "product-card__title text",
         "title": "Белая куртка",
         "price": "2900 грн",

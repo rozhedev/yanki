@@ -1,6 +1,6 @@
 [
     {
-        "imgPath": "../../img/photos/categories/woman3.jpg",
+        "imgPath": "img/photos/categories/woman3.jpg",
         "titleClasses": "product-card__title product-card__title--new text",
         "title": "Бежевая шуба",
         "price": "4200 грн",
@@ -11,7 +11,7 @@
         "size5": "L"
     },
     {
-        "imgPath": "../../img/photos/categories/woman4.jpg",
+        "imgPath": "img/photos/categories/woman4.jpg",
         "titleClasses": "product-card__title text",
         "title": "Синяя парка",
         "price": "2900 грн",
@@ -22,7 +22,7 @@
         "size5": "L"
     },
     {
-        "imgPath": "../../img/photos/categories/woman1.jpg",
+        "imgPath": "img/photos/categories/woman1.jpg",
         "titleClasses": "product-card__title text",
         "title": "Белая куртка",
         "price": "2900 грн",
@@ -33,7 +33,7 @@
         "size5":"L"
     },
     {
-        "imgPath": "../../img/photos/categories/woman2.jpg",
+        "imgPath": "img/photos/categories/woman2.jpg",
         "titleClasses": "product-card__title text",
         "title": "Синее пальто",
         "price": "3150 грн",

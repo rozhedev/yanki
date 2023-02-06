@@ -74,8 +74,7 @@
                 color: $dark-color;
             }
             &__value::before {
-                background: url("../../img/icons/chevron-bottom-dark.svg") 
-                center / 100% no-repeat;
+                background: url($pathIconDark) center / 100% no-repeat;
             }
             &__options {
                 margin-top: 9px;
