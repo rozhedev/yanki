@@ -32,5 +32,9 @@ export const CLASS_LIST = {
     },
     slider: {
         category: "categories-swiper",
+        nextBtn: "swiper-button-next",
+        prevBtn: "swiper-button-prev",
+        thumb: "product-thumb",
+        product: "product-swiper",
     },
 }

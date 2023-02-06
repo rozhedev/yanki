@@ -22,7 +22,6 @@ const server = () => {
             baseDir: path.root,
         },
         notify: false,
-        tunnel: 'yanki-test', // Attempt to use the URL https://yanki-test.loca.lt
     });
 }
 

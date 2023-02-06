@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('_head.html',{
+@@include('chunks/_head.html',{
 "title":"Главная"
 })
 
@@ -11,10 +11,10 @@
             <div class="loader"></div>
         </div>
 
-        <main class="main page" id="main">
+        <div class="page" id="main">
             <section class="home" id="home">
                 <!-- * HEADER -->
-                @@include('components/_header.html',{})
+                @@include('chunks/_header.html',{})
 
                 <div class="home__inner _container">
                     <h1 class="title h1">Новая коллекция</h1>
@@ -76,14 +76,14 @@
             <div class="_container">
                 @@include('components/_subscribe.html',{})
             </div>
-        </main>
+        </div>
 
         <!-- * FOOTER -->
-        @@include('components/_footer.html',{})
+        @@include('chunks/_footer.html',{})
     </div>
 
     <!-- * JS -->
-    @@include('_js.html',{})
+    @@include('chunks/_js.html',{})
 </body>
 
 </html>

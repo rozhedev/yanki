@@ -1,13 +1,14 @@
-import Swiper, { Navigation, Thumbs} from 'swiper';
+import { CLASS_LIST } from '../data/classlist';
+import Swiper, { Navigation, Thumbs } from 'swiper';
 
-const categorySwiper = new Swiper(".categories-swiper", {
+const categorySwiper = new Swiper(`.${CLASS_LIST.slider.category}`, {
     modules: [Navigation, Thumbs],
     direction: "horizontal",
     loop: false,
 
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: `.${CLASS_LIST.slider.nextBtn}`,
+        prevEl: `.${CLASS_LIST.slider.prevBtn}`,
     },
     breakpoints: {
         320.98: {
@@ -29,7 +30,7 @@ const categorySwiper = new Swiper(".categories-swiper", {
     },
 });
 
-const productThumb = new Swiper(".product-thumb", {
+const productThumb = new Swiper(`.${CLASS_LIST.slider.thumb}`, {
     modules: [Navigation, Thumbs],
     watchSlidesProgress: true,
     slidesPerView: 5,
@@ -54,7 +55,7 @@ const productThumb = new Swiper(".product-thumb", {
     },
 });
 
-const productSwiper = new Swiper(".product-swiper", {
+const productSwiper = new Swiper(`.${CLASS_LIST.slider.product}`, {
     modules: [Navigation, Thumbs],
     watchSlidesProgress: true,
     slidesPerView: 1,

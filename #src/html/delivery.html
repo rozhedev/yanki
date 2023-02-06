@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('_head.html',{
+@@include('chunks/_head.html',{
 "title":"Оплата и доставка"
 })
 
@@ -11,10 +11,10 @@
             <div class="loader"></div>
         </div>
 
-        <main class="main page">
+        <div class="page">
             <section class="delivery">
                 <!-- * HEADER -->
-                @@include('components/_header.html',{})
+                @@include('chunks/_header.html',{})
 
                 <div class="delivery__inner _container section-page">
                     <nav>
@@ -84,14 +84,14 @@
                     </div>
                 </div>
             </section>
-        </main>
+        </div>
 
         <!-- * FOOTER -->
-        @@include('components/_footer.html',{})
+        @@include('chunks/_footer.html',{})
     </div>
 
     <!-- * JS -->
-    @@include('_js.html',{})
+    @@include('chunks/_js.html',{})
 </body>
 
 </html>
